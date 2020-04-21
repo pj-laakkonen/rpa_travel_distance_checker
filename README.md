@@ -1,4 +1,5 @@
-# rpa_travel_distance_checker
+# https://github.com/pj-laakkonen/rpa_travel_distance_checker
+# RPA Travel distance checker
 # Author Petri Laakkonen
 # petri@laakkonen.io
 
