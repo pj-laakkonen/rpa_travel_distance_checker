@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo Running automated tasks...
+echo
+cd /Users/petri/Dropbox/github/rpa_travel_distance_checker/
+robot travel.robot
+cp log.html /Users/petri/Dropbox/TravelDistances/
+cp report.html /Users/petri/Dropbox/TravelDistances/
+echo All done!
+echo This window closes in 5 seconds...
+Sleep 5
+
