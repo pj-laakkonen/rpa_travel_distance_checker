@@ -2,8 +2,8 @@
 
 echo Running automated tasks...
 echo
-cd /Users/petri/Dropbox/github/rpa_travel_distance_checker/
-robot travel.robot
+cd /Users/petri/Dropbox/github/rpa_travel_distance_checker/tasks/
+robot main.robot
 cp log.html /Users/petri/Dropbox/TravelDistances/
 cp report.html /Users/petri/Dropbox/TravelDistances/
 echo All done!

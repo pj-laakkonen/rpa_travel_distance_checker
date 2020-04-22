@@ -1,0 +1,2943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on darwin)" generated="20200423 01:19:19.186" rpa="true">
+<suite id="s1" name="Main" source="/Users/petri/Dropbox/github/rpa_travel_distance_checker/tasks/main.robot">
+<kw name="Initialize System" library="keywords" type="setup">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>filename=${WORK_FOLDER_PATH}${EXCEL_PATH}</arg>
+<arg>doc_id=doc1</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.383" endtime="20200423 01:19:19.505"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=2</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${ROWS}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.505" level="INFO">${ROWS} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:19.505" endtime="20200423 01:19:19.505"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ROWS}</arg>
+</arguments>
+<msg timestamp="20200423 01:19:19.505" level="INFO">${ROWS} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:19.505" endtime="20200423 01:19:19.505"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nNumber of Distances: ${ROWS}\n</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.505" endtime="20200423 01:19:19.505"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.383" endtime="20200423 01:19:19.506"></status>
+</kw>
+<test id="s1-t1" name="Get distances from Excel file">
+<kw name="Get Distances From Excel" library="keywords">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{TRAVEL_LIST_START}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.506" level="INFO">@{TRAVEL_LIST_START} = [ ]</msg>
+<status status="PASS" starttime="20200423 01:19:19.506" endtime="20200423 01:19:19.506"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{TRAVEL_LIST_END}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.507" level="INFO">@{TRAVEL_LIST_END} = [ ]</msg>
+<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.507"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+</arguments>
+<msg timestamp="20200423 01:19:19.507" level="INFO">${TRAVEL_LIST_START} = []</msg>
+<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.507"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_END}</arg>
+</arguments>
+<msg timestamp="20200423 01:19:19.507" level="INFO">${TRAVEL_LIST_END} = []</msg>
+<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.507"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${ROWS} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.508" level="INFO">${row_id} = 7</msg>
+<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.508"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.508" level="INFO">${start_street} = Kauppatie</msg>
+<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.508"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.508" level="INFO">${start_number} = 1</msg>
+<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.508"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.508" level="INFO">${start_city} = JOENSUU</msg>
+<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.508"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.509" level="INFO">${start_postalcode} = 81200</msg>
+<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.509"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.509"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.509" level="INFO">${row_id} = 7</msg>
+<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.509"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.509" level="INFO">${end_street} = Vapaudenkatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.509"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.510" level="INFO">${end_number} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.510"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.510" level="INFO">${end_city} = LAHTI</msg>
+<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.510"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.510" level="INFO">${end_postalcode} = 15114</msg>
+<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.510"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.510"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.510"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.511" level="INFO">${row_id} = 8</msg>
+<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.511"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.511" level="INFO">${start_street} = Saarijärventie</msg>
+<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.511"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.511" level="INFO">${start_number} = 50</msg>
+<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.511"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.512" level="INFO">${start_city} = PALOKKA</msg>
+<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.512"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.512" level="INFO">${start_postalcode} = 40270</msg>
+<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.512"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.512"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.512" level="INFO">${row_id} = 8</msg>
+<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.512"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.513" level="INFO">${end_street} = Sodankyläntie</msg>
+<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.513"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.513" level="INFO">${end_number} = 9</msg>
+<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.513"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.513" level="INFO">${end_city} = PELKOSENNIEMI</msg>
+<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.513"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.513" level="INFO">${end_postalcode} = 98500</msg>
+<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.513"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.514"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.514"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.514" level="INFO">${row_id} = 9</msg>
+<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.514"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.514" level="INFO">${start_street} = Pitkäpellonkatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.514"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.514" level="INFO">${start_number} = 2</msg>
+<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.514"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.515" level="INFO">${start_city} = TURKU</msg>
+<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.515"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.515" level="INFO">${start_postalcode} = 20904</msg>
+<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.515"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.515"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.515" level="INFO">${row_id} = 9</msg>
+<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.515"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.516" level="INFO">${end_street} = Sipulikatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.516"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.516" level="INFO">${end_number} = 2</msg>
+<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.516"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.516" level="INFO">${end_city} = KUOPIO</msg>
+<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.516"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.516" level="INFO">${end_postalcode} = 70824</msg>
+<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.516"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.517"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.517"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.517" level="INFO">${row_id} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.517"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.517" level="INFO">${start_street} = Tyynylaavantie</msg>
+<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.517"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.517" level="INFO">${start_number} = 5</msg>
+<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.517"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.518" level="INFO">${start_city} = HELSINKI</msg>
+<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.518"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.518" level="INFO">${start_postalcode} = 980</msg>
+<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.518"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.518"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.519" level="INFO">${row_id} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.519"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.519" level="INFO">${end_street} = Kaskelantie</msg>
+<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.519"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.519" level="INFO">${end_number} = 5</msg>
+<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.519"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.519" level="INFO">${end_city} = VANTAA</msg>
+<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.519"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.520" level="INFO">${end_postalcode} = 1204</msg>
+<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.520"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.520"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.520"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.520" level="INFO">${row_id} = 11</msg>
+<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.520"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.520" level="INFO">${start_street} = Ilmarinkatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.520"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.521" level="INFO">${start_number} = 49</msg>
+<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.521"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.521" level="INFO">${start_city} = TAMPERE</msg>
+<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.521"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.521" level="INFO">${start_postalcode} = 33504</msg>
+<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.521"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.521"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.522" level="INFO">${row_id} = 11</msg>
+<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.522"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.522" level="INFO">${end_street} = Tuulosentie</msg>
+<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.522"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.522" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.522"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.522" level="INFO">${end_city} = TUULOS</msg>
+<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.522"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.523" level="INFO">${end_postalcode} = 14814</msg>
+<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.523"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.523"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.523"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.523" level="INFO">${row_id} = 12</msg>
+<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.523"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.523" level="INFO">${start_street} = Vasarakatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.523"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.524" level="INFO">${start_number} = 29</msg>
+<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.524"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.524" level="INFO">${start_city} = JYVÄSKYLÄ</msg>
+<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.524"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.524" level="INFO">${start_postalcode} = 40325</msg>
+<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.524"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.524"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.525" level="INFO">${row_id} = 12</msg>
+<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.525"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.525" level="INFO">${end_street} = Veturitie</msg>
+<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.525"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.525" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.525"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.525" level="INFO">${end_city} = KAJAANI</msg>
+<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.525"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.526" level="INFO">${end_postalcode} = 87105</msg>
+<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.526"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.526"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.526"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.526" level="INFO">${row_id} = 13</msg>
+<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.526"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.526" level="INFO">${start_street} = Laajankankaankatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.526"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.527" level="INFO">${start_number} = 2</msg>
+<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.527" level="INFO">${start_city} = KAJAANI</msg>
+<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.527" level="INFO">${start_postalcode} = 87504</msg>
+<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.528" level="INFO">${row_id} = 13</msg>
+<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.528" level="INFO">${end_street} = Oksapolku</msg>
+<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.528" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.528" level="INFO">${end_city} = JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.529" level="INFO">${end_postalcode} = 4440</msg>
+<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.529"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.529" level="INFO">${row_id} = 14</msg>
+<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.529" level="INFO">${start_street} = Magneettikatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.530" level="INFO">${start_number} = 2</msg>
+<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.530" level="INFO">${start_city} = ESPOO</msg>
+<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.530" level="INFO">${start_postalcode} = 2335</msg>
+<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.531" level="INFO">${row_id} = 14</msg>
+<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.531"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.531" level="INFO">${end_street} = Esplanaadi</msg>
+<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.531"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.531" level="INFO">${end_number} = 69</msg>
+<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.531"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.531" level="INFO">${end_city} = HANKO</msg>
+<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.531"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.532" level="INFO">${end_postalcode} = 10904</msg>
+<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.532"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.532"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.532"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.532" level="INFO">${row_id} = 15</msg>
+<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.532"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.533" level="INFO">${start_street} = Yhteiskouluntie</msg>
+<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.533"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.533" level="INFO">${start_number} = 17</msg>
+<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.533"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.533" level="INFO">${start_city} = JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.533"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.533" level="INFO">${start_postalcode} = 4404</msg>
+<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.533"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.534"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.534" level="INFO">${row_id} = 15</msg>
+<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.534"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.534" level="INFO">${end_street} = Sallantie</msg>
+<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.534"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.534" level="INFO">${end_number} = 2640</msg>
+<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.534"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.535" level="INFO">${end_city} = KEMIJÄRVI</msg>
+<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.535"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.535" level="INFO">${end_postalcode} = 98714</msg>
+<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.535"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.535"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.535"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.535" level="INFO">${row_id} = 16</msg>
+<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.535"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=1</arg>
+</arguments>
+<assign>
+<var>${start_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.536" level="INFO">${start_street} = Ahlströminkatu</msg>
+<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.536"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=2</arg>
+</arguments>
+<assign>
+<var>${start_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.536" level="INFO">${start_number} = 21</msg>
+<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.536"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=3</arg>
+</arguments>
+<assign>
+<var>${start_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.536" level="INFO">${start_city} = VARKAUS</msg>
+<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.536"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=4</arg>
+</arguments>
+<assign>
+<var>${start_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.536" level="INFO">${start_postalcode} = 78254</msg>
+<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.536"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TRAVEL_LIST_START}</arg>
+<arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.537"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.537" level="INFO">${row_id} = 16</msg>
+<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.537"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=5</arg>
+</arguments>
+<assign>
+<var>${end_street}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.537" level="INFO">${end_street} = Kilpivirrantie</msg>
+<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.537"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=6</arg>
+</arguments>
+<assign>
+<var>${end_number}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.537" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.537"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=7</arg>
+</arguments>
+<assign>
+<var>${end_city}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.538" level="INFO">${end_city} = IISALMI</msg>
+<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.538"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=${row_id}</arg>
+<arg>col_num=8</arg>
+</arguments>
+<assign>
+<var>${end_postalcode}</var>
+</assign>
+<msg timestamp="20200423 01:19:19.538" level="INFO">${end_postalcode} = 74124</msg>
+<status status="PASS" starttime="20200423 01:19:19.538" endtime="20200423 01:19:19.538"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${TravelListEnd}</arg>
+<arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:19.538" endtime="20200423 01:19:19.538"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.538"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.538"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.506" endtime="20200423 01:19:19.538"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.506" endtime="20200423 01:19:19.538" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Get Google Maps distances and write to Excel file">
+<kw name="Get Google Maps Distances And Write To Excel File" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200423 01:19:19.539" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.fi/maps/dir/'.</msg>
+<status status="PASS" starttime="20200423 01:19:19.539" endtime="20200423 01:19:25.048"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:25.048" endtime="20200423 01:19:25.112"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@data-travel_mode, "0")]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:25.112" level="INFO">Clicking element '//*[contains(@data-travel_mode, "0")]'.</msg>
+<status status="PASS" starttime="20200423 01:19:25.112" endtime="20200423 01:19:25.174"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\n</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:25.174" endtime="20200423 01:19:25.174"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${ROWS} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:25.175" level="INFO">${current_id} = 1</msg>
+<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:25.175"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:25.175"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:25.176" level="INFO">Sending key(s) ('Kauppatie, 1, 81200 JOENSUU',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:25.614" level="INFO">Sending keys Kauppatie, 1, 81200 JOENSUU</msg>
+<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:25.854"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:25.855" level="INFO">Sending key(s) ('Vapaudenkatu, 10, 15114 LAHTI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:26.179" level="INFO">Sending keys Vapaudenkatu, 10, 15114 LAHTI</msg>
+<status status="PASS" starttime="20200423 01:19:25.854" endtime="20200423 01:19:26.270"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:26.271" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:26.567" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:26.567" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:26.271" endtime="20200423 01:19:26.575"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:26.575" endtime="20200423 01:19:27.377"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:27.378" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:27.377" endtime="20200423 01:19:27.463"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:27.463" endtime="20200423 01:19:27.711"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:27.735" level="INFO">${trip} = (370 km)</msg>
+<status status="PASS" starttime="20200423 01:19:27.711" endtime="20200423 01:19:27.735"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:27.735" endtime="20200423 01:19:27.735"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:27.736" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:27.736" endtime="20200423 01:19:27.862"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:27.862" endtime="20200423 01:19:27.862"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:27.863" level="INFO">${row_id} = 7</msg>
+<status status="PASS" starttime="20200423 01:19:27.862" endtime="20200423 01:19:27.863"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:27.863" level="INFO">${dist} = 370.0</msg>
+<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:27.863"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:27.863"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:27.863"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:27.864" level="INFO">${current_id} = 2</msg>
+<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:27.864"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:27.864" endtime="20200423 01:19:27.864"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:27.864" level="INFO">Sending key(s) ('Saarijärventie, 50, 40270 PALOKKA',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:28.192" level="INFO">Sending keys Saarijärventie, 50, 40270 PALOKKA</msg>
+<status status="PASS" starttime="20200423 01:19:27.864" endtime="20200423 01:19:28.282"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:28.282" level="INFO">Sending key(s) ('Sodankyläntie, 9, 98500 PELKOSENNIEMI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:28.563" level="INFO">Sending keys Sodankyläntie, 9, 98500 PELKOSENNIEMI</msg>
+<status status="PASS" starttime="20200423 01:19:28.282" endtime="20200423 01:19:28.862"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:28.863" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:29.154" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:29.154" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:28.863" endtime="20200423 01:19:29.161"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:29.161" endtime="20200423 01:19:30.009"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:30.009" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:30.009" endtime="20200423 01:19:30.040"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:30.040" endtime="20200423 01:19:30.261"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:30.291" level="INFO">${trip} = (669 km)</msg>
+<status status="PASS" starttime="20200423 01:19:30.261" endtime="20200423 01:19:30.291"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:30.291" endtime="20200423 01:19:30.292"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:30.292" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:30.292" endtime="20200423 01:19:30.372"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:30.372" endtime="20200423 01:19:30.373"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:30.373" level="INFO">${row_id} = 8</msg>
+<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:30.373"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:30.373" level="INFO">${dist} = 669.0</msg>
+<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:30.373"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:30.373"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:30.373"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:30.374" level="INFO">${current_id} = 3</msg>
+<status status="PASS" starttime="20200423 01:19:30.374" endtime="20200423 01:19:30.374"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:30.374" endtime="20200423 01:19:30.374"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:30.374" level="INFO">Sending key(s) ('Pitkäpellonkatu, 2, 20904 TURKU',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:30.657" level="INFO">Sending keys Pitkäpellonkatu, 2, 20904 TURKU</msg>
+<status status="PASS" starttime="20200423 01:19:30.374" endtime="20200423 01:19:30.766"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:30.767" level="INFO">Sending key(s) ('Sipulikatu, 2, 70824 KUOPIO',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:31.045" level="INFO">Sending keys Sipulikatu, 2, 70824 KUOPIO</msg>
+<status status="PASS" starttime="20200423 01:19:30.766" endtime="20200423 01:19:31.179"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:31.180" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:31.471" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:31.471" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:31.179" endtime="20200423 01:19:31.568"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:31.568" endtime="20200423 01:19:32.536"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:32.536" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:32.536" endtime="20200423 01:19:32.751"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:32.751" endtime="20200423 01:19:33.125"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:33.137" level="INFO">${trip} = (455 km)</msg>
+<status status="PASS" starttime="20200423 01:19:33.125" endtime="20200423 01:19:33.137"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:33.137" endtime="20200423 01:19:33.137"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:33.138" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:33.138" endtime="20200423 01:19:33.180"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:33.180" endtime="20200423 01:19:33.181"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:33.181" level="INFO">${row_id} = 9</msg>
+<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:33.181"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:33.181" level="INFO">${dist} = 455.0</msg>
+<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:33.181"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:33.181"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:33.181"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:33.182" level="INFO">${current_id} = 4</msg>
+<status status="PASS" starttime="20200423 01:19:33.182" endtime="20200423 01:19:33.182"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:33.182" endtime="20200423 01:19:33.182"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:33.182" level="INFO">Sending key(s) ('Tyynylaavantie, 5, 980 HELSINKI',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:33.476" level="INFO">Sending keys Tyynylaavantie, 5, 980 HELSINKI</msg>
+<status status="PASS" starttime="20200423 01:19:33.182" endtime="20200423 01:19:33.584"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:33.584" level="INFO">Sending key(s) ('Kaskelantie, 5, 1204 VANTAA',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:33.859" level="INFO">Sending keys Kaskelantie, 5, 1204 VANTAA</msg>
+<status status="PASS" starttime="20200423 01:19:33.584" endtime="20200423 01:19:33.949"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:33.949" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:34.226" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:34.226" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:33.949" endtime="20200423 01:19:34.242"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:34.242" endtime="20200423 01:19:34.900"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:34.900" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:34.900" endtime="20200423 01:19:34.946"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:34.946" endtime="20200423 01:19:35.175"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:35.188" level="INFO">${trip} = (12,0 km)</msg>
+<status status="PASS" starttime="20200423 01:19:35.175" endtime="20200423 01:19:35.188"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:35.188" endtime="20200423 01:19:35.188"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:35.188" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:35.188" endtime="20200423 01:19:35.226"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:35.226" endtime="20200423 01:19:35.227"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:35.227" level="INFO">${row_id} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:35.227"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:35.227" level="INFO">${dist} = 12.0</msg>
+<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:35.227"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:35.227"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:35.227"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:35.228" level="INFO">${current_id} = 5</msg>
+<status status="PASS" starttime="20200423 01:19:35.228" endtime="20200423 01:19:35.228"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:35.228" endtime="20200423 01:19:35.228"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:35.228" level="INFO">Sending key(s) ('Ilmarinkatu, 49, 33504 TAMPERE',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:35.511" level="INFO">Sending keys Ilmarinkatu, 49, 33504 TAMPERE</msg>
+<status status="PASS" starttime="20200423 01:19:35.228" endtime="20200423 01:19:35.610"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:35.610" level="INFO">Sending key(s) ('Tuulosentie, 1, 14814 TUULOS',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:35.906" level="INFO">Sending keys Tuulosentie, 1, 14814 TUULOS</msg>
+<status status="PASS" starttime="20200423 01:19:35.610" endtime="20200423 01:19:36.103"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:36.104" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:36.489" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:36.489" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:36.104" endtime="20200423 01:19:36.495"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:36.496" endtime="20200423 01:19:37.287"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:37.287" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:37.287" endtime="20200423 01:19:37.503"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:37.504" endtime="20200423 01:19:38.080"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:38.093" level="INFO">${trip} = (79,4 km)</msg>
+<status status="PASS" starttime="20200423 01:19:38.080" endtime="20200423 01:19:38.093"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:38.093" endtime="20200423 01:19:38.094"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:38.094" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:38.094" endtime="20200423 01:19:38.127"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.128"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:38.128" level="INFO">${row_id} = 11</msg>
+<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.128"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:38.128" level="INFO">${dist} = 79.4</msg>
+<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.128"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.129"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:38.129"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:38.129" level="INFO">${current_id} = 6</msg>
+<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:38.129"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:38.129"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:38.129" level="INFO">Sending key(s) ('Vasarakatu, 29, 40325 JYVÄSKYLÄ',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:38.415" level="INFO">Sending keys Vasarakatu, 29, 40325 JYVÄSKYLÄ</msg>
+<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:38.528"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:38.529" level="INFO">Sending key(s) ('Veturitie, 1, 87105 KAJAANI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:38.809" level="INFO">Sending keys Veturitie, 1, 87105 KAJAANI</msg>
+<status status="PASS" starttime="20200423 01:19:38.528" endtime="20200423 01:19:38.907"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:38.907" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:39.174" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:39.174" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:38.907" endtime="20200423 01:19:39.182"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:39.182" endtime="20200423 01:19:40.045"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:40.045" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:40.045" endtime="20200423 01:19:40.095"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:40.095" endtime="20200423 01:19:40.310"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:40.321" level="INFO">${trip} = (319 km)</msg>
+<status status="PASS" starttime="20200423 01:19:40.310" endtime="20200423 01:19:40.321"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:40.321" endtime="20200423 01:19:40.321"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:40.321" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:40.321" endtime="20200423 01:19:40.364"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:40.364" endtime="20200423 01:19:40.364"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:40.364" level="INFO">${row_id} = 12</msg>
+<status status="PASS" starttime="20200423 01:19:40.364" endtime="20200423 01:19:40.364"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:40.364" level="INFO">${dist} = 319.0</msg>
+<status status="PASS" starttime="20200423 01:19:40.364" endtime="20200423 01:19:40.364"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.365"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:40.365"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:40.365" level="INFO">${current_id} = 7</msg>
+<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.365"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.365"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:40.366" level="INFO">Sending key(s) ('Laajankankaankatu, 2, 87504 KAJAANI',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:40.645" level="INFO">Sending keys Laajankankaankatu, 2, 87504 KAJAANI</msg>
+<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.733"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:40.733" level="INFO">Sending key(s) ('Oksapolku, 1, 4440 JÄRVENPÄÄ',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:41.015" level="INFO">Sending keys Oksapolku, 1, 4440 JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200423 01:19:40.733" endtime="20200423 01:19:41.122"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:41.122" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:41.386" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:41.386" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:41.122" endtime="20200423 01:19:41.393"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:41.393" endtime="20200423 01:19:42.232"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:42.233" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:42.233" endtime="20200423 01:19:42.279"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:42.279" endtime="20200423 01:19:42.498"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:42.511" level="INFO">${trip} = (516 km)</msg>
+<status status="PASS" starttime="20200423 01:19:42.498" endtime="20200423 01:19:42.511"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:42.511" endtime="20200423 01:19:42.512"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:42.512" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:42.512" endtime="20200423 01:19:42.549"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:42.549" endtime="20200423 01:19:42.550"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:42.550" level="INFO">${row_id} = 13</msg>
+<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.550"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:42.550" level="INFO">${dist} = 516.0</msg>
+<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.550"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.550"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:42.550"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:42.551" level="INFO">${current_id} = 8</msg>
+<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.551"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:42.551" endtime="20200423 01:19:42.551"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:42.551" level="INFO">Sending key(s) ('Magneettikatu, 2, 2335 ESPOO',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:42.845" level="INFO">Sending keys Magneettikatu, 2, 2335 ESPOO</msg>
+<status status="PASS" starttime="20200423 01:19:42.551" endtime="20200423 01:19:42.918"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:42.918" level="INFO">Sending key(s) ('Esplanaadi, 69, 10904 HANKO',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:43.198" level="INFO">Sending keys Esplanaadi, 69, 10904 HANKO</msg>
+<status status="PASS" starttime="20200423 01:19:42.918" endtime="20200423 01:19:43.343"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:43.343" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:43.617" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:43.617" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:43.343" endtime="20200423 01:19:43.664"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:43.664" endtime="20200423 01:19:44.319"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:44.320" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:44.320" endtime="20200423 01:19:44.363"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:44.363" endtime="20200423 01:19:44.581"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:44.595" level="INFO">${trip} = (109 km)</msg>
+<status status="PASS" starttime="20200423 01:19:44.581" endtime="20200423 01:19:44.595"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:44.595" endtime="20200423 01:19:44.596"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:44.596" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:44.596" endtime="20200423 01:19:44.630"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:44.630" endtime="20200423 01:19:44.631"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:44.631" level="INFO">${row_id} = 14</msg>
+<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.631"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:44.631" level="INFO">${dist} = 109.0</msg>
+<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.631"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.631"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:44.631"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:44.632" level="INFO">${current_id} = 9</msg>
+<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.632"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:44.632" endtime="20200423 01:19:44.632"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:44.632" level="INFO">Sending key(s) ('Yhteiskouluntie, 17, 4404 JÄRVENPÄÄ',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:44.915" level="INFO">Sending keys Yhteiskouluntie, 17, 4404 JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200423 01:19:44.632" endtime="20200423 01:19:44.999"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:45.000" level="INFO">Sending key(s) ('Sallantie, 2640, 98714 KEMIJÄRVI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:45.276" level="INFO">Sending keys Sallantie, 2640, 98714 KEMIJÄRVI</msg>
+<status status="PASS" starttime="20200423 01:19:44.999" endtime="20200423 01:19:45.346"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:45.347" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:45.625" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:45.626" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:45.346" endtime="20200423 01:19:45.632"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:45.632" endtime="20200423 01:19:46.682"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:46.683" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:46.683" endtime="20200423 01:19:46.713"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:46.713" endtime="20200423 01:19:46.931"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:46.944" level="INFO">${trip} = (874 km)</msg>
+<status status="PASS" starttime="20200423 01:19:46.931" endtime="20200423 01:19:46.944"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:46.944" endtime="20200423 01:19:46.944"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:46.944" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:46.944" endtime="20200423 01:19:46.984"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:46.984" endtime="20200423 01:19:46.985"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:46.985" level="INFO">${row_id} = 15</msg>
+<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:46.985"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:46.985" level="INFO">${dist} = 874.0</msg>
+<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:46.985"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:46.985"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:46.985"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${current_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:46.986" level="INFO">${current_id} = 10</msg>
+<status status="PASS" starttime="20200423 01:19:46.986" endtime="20200423 01:19:46.986"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Distance: ${current_id}/${ROWS}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:46.986" endtime="20200423 01:19:46.986"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc50</arg>
+<arg>@{TRAVEL_LIST_START}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:46.986" level="INFO">Sending key(s) ('Ahlströminkatu, 21, 78254 VARKAUS',) to sb_ifc50 element.</msg>
+<msg timestamp="20200423 01:19:47.296" level="INFO">Sending keys Ahlströminkatu, 21, 78254 VARKAUS</msg>
+<status status="PASS" starttime="20200423 01:19:46.986" endtime="20200423 01:19:47.381"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>@{TRAVEL_LIST_END}[${i}]</arg>
+</arguments>
+<msg timestamp="20200423 01:19:47.382" level="INFO">Sending key(s) ('Kilpivirrantie, 1, 74124 IISALMI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:47.666" level="INFO">Sending keys Kilpivirrantie, 1, 74124 IISALMI</msg>
+<status status="PASS" starttime="20200423 01:19:47.382" endtime="20200423 01:19:47.836"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>sb_ifc51</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200423 01:19:47.836" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200423 01:19:48.185" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200423 01:19:48.185" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200423 01:19:47.836" endtime="20200423 01:19:48.195"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:48.195" endtime="20200423 01:19:48.922"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>section-directions-trip-0</arg>
+</arguments>
+<msg timestamp="20200423 01:19:48.922" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200423 01:19:48.922" endtime="20200423 01:19:49.141"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:49.141" endtime="20200423 01:19:49.365"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-summary-subtitle</arg>
+</arguments>
+<assign>
+<var>${trip}</var>
+</assign>
+<msg timestamp="20200423 01:19:49.376" level="INFO">${trip} = (164 km)</msg>
+<status status="PASS" starttime="20200423 01:19:49.365" endtime="20200423 01:19:49.376"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:49.376" endtime="20200423 01:19:49.376"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=section-trip-header-back</arg>
+</arguments>
+<msg timestamp="20200423 01:19:49.376" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200423 01:19:49.376" endtime="20200423 01:19:49.430"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>1</arg>
+<arg>1</arg>
+<arg>Checked Travel Distances</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${i} + ${START_ROW}</arg>
+</arguments>
+<assign>
+<var>${row_id}</var>
+</assign>
+<msg timestamp="20200423 01:19:49.431" level="INFO">${row_id} = 16</msg>
+<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+</kw>
+<kw name="String 2 Float" library="CustomCode">
+<arguments>
+<arg>${trip}</arg>
+</arguments>
+<assign>
+<var>${dist}</var>
+</assign>
+<msg timestamp="20200423 01:19:49.431" level="INFO">${dist} = 164.0</msg>
+<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<doc>Writes value to the cell.</doc>
+<arguments>
+<arg>${row_id}</arg>
+<arg>10</arg>
+<arg>${dist}</arg>
+<arg>Data</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:49.431"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:25.174" endtime="20200423 01:19:49.432"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.539" endtime="20200423 01:19:49.432"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:19.538" endtime="20200423 01:19:49.432" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Save and close">
+<kw name="Save and Close Excel" library="keywords">
+<kw name="Save Excel Document" library="ExcelLibrary">
+<doc>Saves the current document to disk.</doc>
+<arguments>
+<arg>filename=${WORK_FOLDER_PATH}${OUTPUT_PATH}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 01:19:49.432" endtime="20200423 01:19:49.600"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200423 01:19:49.600" endtime="20200423 01:19:49.600"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:49.432" endtime="20200423 01:19:49.600"></status>
+</kw>
+<status status="PASS" starttime="20200423 01:19:49.432" endtime="20200423 01:19:49.600" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 01:19:49.601" endtime="20200423 01:19:49.745"></status>
+</kw>
+<doc>Travel Distance Checker v. 0.1.1
+
+Check distances from Google maps with Robot Framework and Selenium
+</doc>
+<status status="PASS" starttime="20200423 01:19:19.187" endtime="20200423 01:19:49.745"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tasks</stat>
+<stat pass="3" fail="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
