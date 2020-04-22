@@ -1,8 +1,0 @@
-*** Variables ***
-${BASE URL}    https://www.google.fi/maps/dir/
-${BROWSER}      Chrome
-
-${WORK_FOLDER_PATH}   /Users/petri/Dropbox/TravelDistances/
-${EXCEL_PATH}   Travel_Distances.xlsx
-${OUTPUT_PATH}   Travel_Distances_Output.xlsx
-${START_ROW}   7
