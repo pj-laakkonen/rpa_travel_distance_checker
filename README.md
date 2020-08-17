@@ -3,7 +3,7 @@
 # Author Petri Laakkonen
 # petri@laakkonen.io
 
-Tech: 
+Tech:
 Python, Robot Framework, Selenium, Excel
 
 Test Data: All Posti pickup points in Finland in JSON and CSV format.
@@ -12,3 +12,5 @@ Source:
 https://api.posti.fi/resources/location_service_api.pdf
 
 # <a href="https://youtu.be/y-K-c6hZ5wE">Demo video (YouTube)</a>
+
+#

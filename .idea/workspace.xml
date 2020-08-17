@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28f17596-c74b-4cab-afd7-508ece28ad13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -78,5 +81,13 @@
       <screen x="0" y="23" width="2560" height="1348" />
     </state>
     <state x="574" y="474" key="IDE.errors.dialog/0.23.2560.1348@0.23.2560.1348" timestamp="1587489744464" />
+    <state x="1460" y="375" key="SettingsEditor" timestamp="1588870754670">
+      <screen x="0" y="23" width="2560" height="1352" />
+    </state>
+    <state x="1460" y="375" key="SettingsEditor/0.23.2560.1352@0.23.2560.1352" timestamp="1588870754670" />
+    <state x="1539" y="370" width="784" height="780" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588871783285">
+      <screen x="0" y="23" width="2560" height="1352" />
+    </state>
+    <state x="1539" y="370" width="784" height="780" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1588871783285" />
   </component>
 </project>

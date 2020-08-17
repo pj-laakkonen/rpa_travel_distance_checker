@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on darwin)" generated="20200423 01:19:19.186" rpa="true">
+<robot generator="Robot 3.1.2 (Python 3.8.2 on darwin)" generated="20200503 16:33:02.661" rpa="true">
 <suite id="s1" name="Main" source="/Users/petri/Dropbox/github/rpa_travel_distance_checker/tasks/main.robot">
 <kw name="Initialize System" library="keywords" type="setup">
 <kw name="Open Excel Document" library="ExcelLibrary">
@@ -8,7 +8,7 @@
 <arg>filename=${WORK_FOLDER_PATH}${EXCEL_PATH}</arg>
 <arg>doc_id=doc1</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.383" endtime="20200423 01:19:19.505"></status>
+<status status="PASS" starttime="20200503 16:33:03.004" endtime="20200503 16:33:03.128"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -19,25 +19,25 @@
 <assign>
 <var>${ROWS}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.505" level="INFO">${ROWS} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:19.505" endtime="20200423 01:19:19.505"></status>
+<msg timestamp="20200503 16:33:03.129" level="INFO">${ROWS} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:03.128" endtime="20200503 16:33:03.129"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${ROWS}</arg>
 </arguments>
-<msg timestamp="20200423 01:19:19.505" level="INFO">${ROWS} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:19.505" endtime="20200423 01:19:19.505"></status>
+<msg timestamp="20200503 16:33:03.129" level="INFO">${ROWS} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:03.129" endtime="20200503 16:33:03.129"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>\nNumber of Distances: ${ROWS}\n</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.505" endtime="20200423 01:19:19.505"></status>
+<status status="PASS" starttime="20200503 16:33:03.129" endtime="20200503 16:33:03.129"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.383" endtime="20200423 01:19:19.506"></status>
+<status status="PASS" starttime="20200503 16:33:03.004" endtime="20200503 16:33:03.129"></status>
 </kw>
 <test id="s1-t1" name="Get distances from Excel file">
 <kw name="Get Distances From Excel" library="keywords">
@@ -46,32 +46,32 @@
 <assign>
 <var>@{TRAVEL_LIST_START}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.506" level="INFO">@{TRAVEL_LIST_START} = [ ]</msg>
-<status status="PASS" starttime="20200423 01:19:19.506" endtime="20200423 01:19:19.506"></status>
+<msg timestamp="20200503 16:33:03.130" level="INFO">@{TRAVEL_LIST_START} = [ ]</msg>
+<status status="PASS" starttime="20200503 16:33:03.130" endtime="20200503 16:33:03.130"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{TRAVEL_LIST_END}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.507" level="INFO">@{TRAVEL_LIST_END} = [ ]</msg>
-<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.507"></status>
+<msg timestamp="20200503 16:33:03.130" level="INFO">@{TRAVEL_LIST_END} = [ ]</msg>
+<status status="PASS" starttime="20200503 16:33:03.130" endtime="20200503 16:33:03.130"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${TRAVEL_LIST_START}</arg>
 </arguments>
-<msg timestamp="20200423 01:19:19.507" level="INFO">${TRAVEL_LIST_START} = []</msg>
-<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.507"></status>
+<msg timestamp="20200503 16:33:03.130" level="INFO">${TRAVEL_LIST_START} = []</msg>
+<status status="PASS" starttime="20200503 16:33:03.130" endtime="20200503 16:33:03.130"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${TRAVEL_LIST_END}</arg>
 </arguments>
-<msg timestamp="20200423 01:19:19.507" level="INFO">${TRAVEL_LIST_END} = []</msg>
-<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.507"></status>
+<msg timestamp="20200503 16:33:03.131" level="INFO">${TRAVEL_LIST_END} = []</msg>
+<status status="PASS" starttime="20200503 16:33:03.131" endtime="20200503 16:33:03.131"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${ROWS} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -83,8 +83,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.508" level="INFO">${row_id} = 7</msg>
-<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.508"></status>
+<msg timestamp="20200503 16:33:03.131" level="INFO">${row_id} = 7</msg>
+<status status="PASS" starttime="20200503 16:33:03.131" endtime="20200503 16:33:03.131"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -95,8 +95,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.508" level="INFO">${start_street} = Kauppatie</msg>
-<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.508"></status>
+<msg timestamp="20200503 16:33:03.131" level="INFO">${start_street} = Kauppatie</msg>
+<status status="PASS" starttime="20200503 16:33:03.131" endtime="20200503 16:33:03.131"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -107,8 +107,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.508" level="INFO">${start_number} = 1</msg>
-<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.508"></status>
+<msg timestamp="20200503 16:33:03.132" level="INFO">${start_number} = 1</msg>
+<status status="PASS" starttime="20200503 16:33:03.131" endtime="20200503 16:33:03.132"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -119,8 +119,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.508" level="INFO">${start_city} = JOENSUU</msg>
-<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.508"></status>
+<msg timestamp="20200503 16:33:03.132" level="INFO">${start_city} = JOENSUU</msg>
+<status status="PASS" starttime="20200503 16:33:03.132" endtime="20200503 16:33:03.132"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -131,8 +131,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.509" level="INFO">${start_postalcode} = 81200</msg>
-<status status="PASS" starttime="20200423 01:19:19.508" endtime="20200423 01:19:19.509"></status>
+<msg timestamp="20200503 16:33:03.132" level="INFO">${start_postalcode} = 81200</msg>
+<status status="PASS" starttime="20200503 16:33:03.132" endtime="20200503 16:33:03.132"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -140,7 +140,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.509"></status>
+<status status="PASS" starttime="20200503 16:33:03.132" endtime="20200503 16:33:03.132"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -150,8 +150,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.509" level="INFO">${row_id} = 7</msg>
-<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.509"></status>
+<msg timestamp="20200503 16:33:03.133" level="INFO">${row_id} = 7</msg>
+<status status="PASS" starttime="20200503 16:33:03.132" endtime="20200503 16:33:03.133"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -162,8 +162,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.509" level="INFO">${end_street} = Vapaudenkatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.509"></status>
+<msg timestamp="20200503 16:33:03.133" level="INFO">${end_street} = Vapaudenkatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.133" endtime="20200503 16:33:03.133"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -174,8 +174,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.510" level="INFO">${end_number} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:19.509" endtime="20200423 01:19:19.510"></status>
+<msg timestamp="20200503 16:33:03.133" level="INFO">${end_number} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:03.133" endtime="20200503 16:33:03.133"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -186,8 +186,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.510" level="INFO">${end_city} = LAHTI</msg>
-<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.510"></status>
+<msg timestamp="20200503 16:33:03.133" level="INFO">${end_city} = LAHTI</msg>
+<status status="PASS" starttime="20200503 16:33:03.133" endtime="20200503 16:33:03.133"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -198,8 +198,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.510" level="INFO">${end_postalcode} = 15114</msg>
-<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.510"></status>
+<msg timestamp="20200503 16:33:03.134" level="INFO">${end_postalcode} = 15114</msg>
+<status status="PASS" starttime="20200503 16:33:03.133" endtime="20200503 16:33:03.134"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -207,9 +207,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.510"></status>
+<status status="PASS" starttime="20200503 16:33:03.134" endtime="20200503 16:33:03.134"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.510"></status>
+<status status="PASS" starttime="20200503 16:33:03.131" endtime="20200503 16:33:03.134"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -220,8 +220,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.511" level="INFO">${row_id} = 8</msg>
-<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.511"></status>
+<msg timestamp="20200503 16:33:03.134" level="INFO">${row_id} = 8</msg>
+<status status="PASS" starttime="20200503 16:33:03.134" endtime="20200503 16:33:03.134"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -232,8 +232,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.511" level="INFO">${start_street} = Saarijärventie</msg>
-<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.511"></status>
+<msg timestamp="20200503 16:33:03.135" level="INFO">${start_street} = Saarijärventie</msg>
+<status status="PASS" starttime="20200503 16:33:03.134" endtime="20200503 16:33:03.135"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -244,8 +244,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.511" level="INFO">${start_number} = 50</msg>
-<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.511"></status>
+<msg timestamp="20200503 16:33:03.135" level="INFO">${start_number} = 50</msg>
+<status status="PASS" starttime="20200503 16:33:03.135" endtime="20200503 16:33:03.135"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -256,8 +256,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.512" level="INFO">${start_city} = PALOKKA</msg>
-<status status="PASS" starttime="20200423 01:19:19.511" endtime="20200423 01:19:19.512"></status>
+<msg timestamp="20200503 16:33:03.135" level="INFO">${start_city} = PALOKKA</msg>
+<status status="PASS" starttime="20200503 16:33:03.135" endtime="20200503 16:33:03.135"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -268,8 +268,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.512" level="INFO">${start_postalcode} = 40270</msg>
-<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.512"></status>
+<msg timestamp="20200503 16:33:03.135" level="INFO">${start_postalcode} = 40270</msg>
+<status status="PASS" starttime="20200503 16:33:03.135" endtime="20200503 16:33:03.135"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -277,7 +277,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.512"></status>
+<status status="PASS" starttime="20200503 16:33:03.135" endtime="20200503 16:33:03.135"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -287,8 +287,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.512" level="INFO">${row_id} = 8</msg>
-<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.512"></status>
+<msg timestamp="20200503 16:33:03.136" level="INFO">${row_id} = 8</msg>
+<status status="PASS" starttime="20200503 16:33:03.136" endtime="20200503 16:33:03.136"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -299,8 +299,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.513" level="INFO">${end_street} = Sodankyläntie</msg>
-<status status="PASS" starttime="20200423 01:19:19.512" endtime="20200423 01:19:19.513"></status>
+<msg timestamp="20200503 16:33:03.136" level="INFO">${end_street} = Sodankyläntie</msg>
+<status status="PASS" starttime="20200503 16:33:03.136" endtime="20200503 16:33:03.136"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -311,8 +311,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.513" level="INFO">${end_number} = 9</msg>
-<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.513"></status>
+<msg timestamp="20200503 16:33:03.136" level="INFO">${end_number} = 9</msg>
+<status status="PASS" starttime="20200503 16:33:03.136" endtime="20200503 16:33:03.136"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -323,8 +323,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.513" level="INFO">${end_city} = PELKOSENNIEMI</msg>
-<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.513"></status>
+<msg timestamp="20200503 16:33:03.136" level="INFO">${end_city} = PELKOSENNIEMI</msg>
+<status status="PASS" starttime="20200503 16:33:03.136" endtime="20200503 16:33:03.136"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -335,8 +335,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.513" level="INFO">${end_postalcode} = 98500</msg>
-<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.513"></status>
+<msg timestamp="20200503 16:33:03.137" level="INFO">${end_postalcode} = 98500</msg>
+<status status="PASS" starttime="20200503 16:33:03.137" endtime="20200503 16:33:03.137"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -344,9 +344,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.513" endtime="20200423 01:19:19.514"></status>
+<status status="PASS" starttime="20200503 16:33:03.137" endtime="20200503 16:33:03.137"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.510" endtime="20200423 01:19:19.514"></status>
+<status status="PASS" starttime="20200503 16:33:03.134" endtime="20200503 16:33:03.137"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -357,8 +357,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.514" level="INFO">${row_id} = 9</msg>
-<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.514"></status>
+<msg timestamp="20200503 16:33:03.137" level="INFO">${row_id} = 9</msg>
+<status status="PASS" starttime="20200503 16:33:03.137" endtime="20200503 16:33:03.137"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -369,8 +369,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.514" level="INFO">${start_street} = Pitkäpellonkatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.514"></status>
+<msg timestamp="20200503 16:33:03.138" level="INFO">${start_street} = Pitkäpellonkatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.137" endtime="20200503 16:33:03.138"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -381,8 +381,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.514" level="INFO">${start_number} = 2</msg>
-<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.514"></status>
+<msg timestamp="20200503 16:33:03.138" level="INFO">${start_number} = 2</msg>
+<status status="PASS" starttime="20200503 16:33:03.138" endtime="20200503 16:33:03.138"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -393,8 +393,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.515" level="INFO">${start_city} = TURKU</msg>
-<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.515"></status>
+<msg timestamp="20200503 16:33:03.138" level="INFO">${start_city} = TURKU</msg>
+<status status="PASS" starttime="20200503 16:33:03.138" endtime="20200503 16:33:03.138"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -405,8 +405,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.515" level="INFO">${start_postalcode} = 20904</msg>
-<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.515"></status>
+<msg timestamp="20200503 16:33:03.138" level="INFO">${start_postalcode} = 20904</msg>
+<status status="PASS" starttime="20200503 16:33:03.138" endtime="20200503 16:33:03.138"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -414,7 +414,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.515"></status>
+<status status="PASS" starttime="20200503 16:33:03.138" endtime="20200503 16:33:03.139"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -424,8 +424,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.515" level="INFO">${row_id} = 9</msg>
-<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.515"></status>
+<msg timestamp="20200503 16:33:03.139" level="INFO">${row_id} = 9</msg>
+<status status="PASS" starttime="20200503 16:33:03.139" endtime="20200503 16:33:03.139"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -436,8 +436,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.516" level="INFO">${end_street} = Sipulikatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.515" endtime="20200423 01:19:19.516"></status>
+<msg timestamp="20200503 16:33:03.139" level="INFO">${end_street} = Sipulikatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.139" endtime="20200503 16:33:03.139"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -448,8 +448,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.516" level="INFO">${end_number} = 2</msg>
-<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.516"></status>
+<msg timestamp="20200503 16:33:03.139" level="INFO">${end_number} = 2</msg>
+<status status="PASS" starttime="20200503 16:33:03.139" endtime="20200503 16:33:03.139"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -460,8 +460,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.516" level="INFO">${end_city} = KUOPIO</msg>
-<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.516"></status>
+<msg timestamp="20200503 16:33:03.140" level="INFO">${end_city} = KUOPIO</msg>
+<status status="PASS" starttime="20200503 16:33:03.139" endtime="20200503 16:33:03.140"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -472,8 +472,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.516" level="INFO">${end_postalcode} = 70824</msg>
-<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.516"></status>
+<msg timestamp="20200503 16:33:03.140" level="INFO">${end_postalcode} = 70824</msg>
+<status status="PASS" starttime="20200503 16:33:03.140" endtime="20200503 16:33:03.140"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -481,9 +481,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.516" endtime="20200423 01:19:19.517"></status>
+<status status="PASS" starttime="20200503 16:33:03.140" endtime="20200503 16:33:03.140"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.514" endtime="20200423 01:19:19.517"></status>
+<status status="PASS" starttime="20200503 16:33:03.137" endtime="20200503 16:33:03.140"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -494,8 +494,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.517" level="INFO">${row_id} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.517"></status>
+<msg timestamp="20200503 16:33:03.140" level="INFO">${row_id} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:03.140" endtime="20200503 16:33:03.140"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -506,8 +506,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.517" level="INFO">${start_street} = Tyynylaavantie</msg>
-<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.517"></status>
+<msg timestamp="20200503 16:33:03.141" level="INFO">${start_street} = Tyynylaavantie</msg>
+<status status="PASS" starttime="20200503 16:33:03.140" endtime="20200503 16:33:03.141"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -518,8 +518,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.517" level="INFO">${start_number} = 5</msg>
-<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.517"></status>
+<msg timestamp="20200503 16:33:03.141" level="INFO">${start_number} = 5</msg>
+<status status="PASS" starttime="20200503 16:33:03.141" endtime="20200503 16:33:03.141"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -530,8 +530,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.518" level="INFO">${start_city} = HELSINKI</msg>
-<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.518"></status>
+<msg timestamp="20200503 16:33:03.141" level="INFO">${start_city} = HELSINKI</msg>
+<status status="PASS" starttime="20200503 16:33:03.141" endtime="20200503 16:33:03.141"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -542,8 +542,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.518" level="INFO">${start_postalcode} = 980</msg>
-<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.518"></status>
+<msg timestamp="20200503 16:33:03.141" level="INFO">${start_postalcode} = 980</msg>
+<status status="PASS" starttime="20200503 16:33:03.141" endtime="20200503 16:33:03.141"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -551,7 +551,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.518"></status>
+<status status="PASS" starttime="20200503 16:33:03.141" endtime="20200503 16:33:03.142"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -561,8 +561,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.519" level="INFO">${row_id} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:19.518" endtime="20200423 01:19:19.519"></status>
+<msg timestamp="20200503 16:33:03.142" level="INFO">${row_id} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:03.142" endtime="20200503 16:33:03.142"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -573,8 +573,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.519" level="INFO">${end_street} = Kaskelantie</msg>
-<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.519"></status>
+<msg timestamp="20200503 16:33:03.142" level="INFO">${end_street} = Kaskelantie</msg>
+<status status="PASS" starttime="20200503 16:33:03.142" endtime="20200503 16:33:03.142"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -585,8 +585,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.519" level="INFO">${end_number} = 5</msg>
-<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.519"></status>
+<msg timestamp="20200503 16:33:03.142" level="INFO">${end_number} = 5</msg>
+<status status="PASS" starttime="20200503 16:33:03.142" endtime="20200503 16:33:03.142"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -597,8 +597,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.519" level="INFO">${end_city} = VANTAA</msg>
-<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.519"></status>
+<msg timestamp="20200503 16:33:03.143" level="INFO">${end_city} = VANTAA</msg>
+<status status="PASS" starttime="20200503 16:33:03.142" endtime="20200503 16:33:03.143"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -609,8 +609,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.520" level="INFO">${end_postalcode} = 1204</msg>
-<status status="PASS" starttime="20200423 01:19:19.519" endtime="20200423 01:19:19.520"></status>
+<msg timestamp="20200503 16:33:03.143" level="INFO">${end_postalcode} = 1204</msg>
+<status status="PASS" starttime="20200503 16:33:03.143" endtime="20200503 16:33:03.143"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -618,9 +618,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.520"></status>
+<status status="PASS" starttime="20200503 16:33:03.143" endtime="20200503 16:33:03.143"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.517" endtime="20200423 01:19:19.520"></status>
+<status status="PASS" starttime="20200503 16:33:03.140" endtime="20200503 16:33:03.143"></status>
 </kw>
 <kw name="${i} = 4" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -631,8 +631,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.520" level="INFO">${row_id} = 11</msg>
-<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.520"></status>
+<msg timestamp="20200503 16:33:03.143" level="INFO">${row_id} = 11</msg>
+<status status="PASS" starttime="20200503 16:33:03.143" endtime="20200503 16:33:03.143"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -643,8 +643,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.520" level="INFO">${start_street} = Ilmarinkatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.520"></status>
+<msg timestamp="20200503 16:33:03.144" level="INFO">${start_street} = Ilmarinkatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.143" endtime="20200503 16:33:03.144"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -655,8 +655,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.521" level="INFO">${start_number} = 49</msg>
-<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.521"></status>
+<msg timestamp="20200503 16:33:03.144" level="INFO">${start_number} = 49</msg>
+<status status="PASS" starttime="20200503 16:33:03.144" endtime="20200503 16:33:03.144"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -667,8 +667,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.521" level="INFO">${start_city} = TAMPERE</msg>
-<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.521"></status>
+<msg timestamp="20200503 16:33:03.144" level="INFO">${start_city} = TAMPERE</msg>
+<status status="PASS" starttime="20200503 16:33:03.144" endtime="20200503 16:33:03.144"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -679,8 +679,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.521" level="INFO">${start_postalcode} = 33504</msg>
-<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.521"></status>
+<msg timestamp="20200503 16:33:03.144" level="INFO">${start_postalcode} = 33504</msg>
+<status status="PASS" starttime="20200503 16:33:03.144" endtime="20200503 16:33:03.144"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -688,7 +688,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.521"></status>
+<status status="PASS" starttime="20200503 16:33:03.144" endtime="20200503 16:33:03.145"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -698,8 +698,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.522" level="INFO">${row_id} = 11</msg>
-<status status="PASS" starttime="20200423 01:19:19.521" endtime="20200423 01:19:19.522"></status>
+<msg timestamp="20200503 16:33:03.145" level="INFO">${row_id} = 11</msg>
+<status status="PASS" starttime="20200503 16:33:03.145" endtime="20200503 16:33:03.145"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -710,8 +710,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.522" level="INFO">${end_street} = Tuulosentie</msg>
-<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.522"></status>
+<msg timestamp="20200503 16:33:03.145" level="INFO">${end_street} = Tuulosentie</msg>
+<status status="PASS" starttime="20200503 16:33:03.145" endtime="20200503 16:33:03.145"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -722,8 +722,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.522" level="INFO">${end_number} = 1</msg>
-<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.522"></status>
+<msg timestamp="20200503 16:33:03.145" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200503 16:33:03.145" endtime="20200503 16:33:03.145"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -734,8 +734,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.522" level="INFO">${end_city} = TUULOS</msg>
-<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.522"></status>
+<msg timestamp="20200503 16:33:03.146" level="INFO">${end_city} = TUULOS</msg>
+<status status="PASS" starttime="20200503 16:33:03.145" endtime="20200503 16:33:03.146"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -746,8 +746,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.523" level="INFO">${end_postalcode} = 14814</msg>
-<status status="PASS" starttime="20200423 01:19:19.522" endtime="20200423 01:19:19.523"></status>
+<msg timestamp="20200503 16:33:03.146" level="INFO">${end_postalcode} = 14814</msg>
+<status status="PASS" starttime="20200503 16:33:03.146" endtime="20200503 16:33:03.146"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -755,9 +755,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.523"></status>
+<status status="PASS" starttime="20200503 16:33:03.146" endtime="20200503 16:33:03.146"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.520" endtime="20200423 01:19:19.523"></status>
+<status status="PASS" starttime="20200503 16:33:03.143" endtime="20200503 16:33:03.146"></status>
 </kw>
 <kw name="${i} = 5" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -768,8 +768,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.523" level="INFO">${row_id} = 12</msg>
-<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.523"></status>
+<msg timestamp="20200503 16:33:03.146" level="INFO">${row_id} = 12</msg>
+<status status="PASS" starttime="20200503 16:33:03.146" endtime="20200503 16:33:03.146"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -780,8 +780,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.523" level="INFO">${start_street} = Vasarakatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.523"></status>
+<msg timestamp="20200503 16:33:03.147" level="INFO">${start_street} = Vasarakatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.146" endtime="20200503 16:33:03.147"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -792,8 +792,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.524" level="INFO">${start_number} = 29</msg>
-<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.524"></status>
+<msg timestamp="20200503 16:33:03.147" level="INFO">${start_number} = 29</msg>
+<status status="PASS" starttime="20200503 16:33:03.147" endtime="20200503 16:33:03.147"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -804,8 +804,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.524" level="INFO">${start_city} = JYVÄSKYLÄ</msg>
-<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.524"></status>
+<msg timestamp="20200503 16:33:03.147" level="INFO">${start_city} = JYVÄSKYLÄ</msg>
+<status status="PASS" starttime="20200503 16:33:03.147" endtime="20200503 16:33:03.147"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -816,8 +816,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.524" level="INFO">${start_postalcode} = 40325</msg>
-<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.524"></status>
+<msg timestamp="20200503 16:33:03.147" level="INFO">${start_postalcode} = 40325</msg>
+<status status="PASS" starttime="20200503 16:33:03.147" endtime="20200503 16:33:03.147"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -825,7 +825,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.524"></status>
+<status status="PASS" starttime="20200503 16:33:03.147" endtime="20200503 16:33:03.148"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -835,8 +835,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.525" level="INFO">${row_id} = 12</msg>
-<status status="PASS" starttime="20200423 01:19:19.524" endtime="20200423 01:19:19.525"></status>
+<msg timestamp="20200503 16:33:03.148" level="INFO">${row_id} = 12</msg>
+<status status="PASS" starttime="20200503 16:33:03.148" endtime="20200503 16:33:03.148"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -847,8 +847,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.525" level="INFO">${end_street} = Veturitie</msg>
-<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.525"></status>
+<msg timestamp="20200503 16:33:03.148" level="INFO">${end_street} = Veturitie</msg>
+<status status="PASS" starttime="20200503 16:33:03.148" endtime="20200503 16:33:03.148"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -859,8 +859,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.525" level="INFO">${end_number} = 1</msg>
-<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.525"></status>
+<msg timestamp="20200503 16:33:03.148" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200503 16:33:03.148" endtime="20200503 16:33:03.148"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -871,8 +871,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.525" level="INFO">${end_city} = KAJAANI</msg>
-<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.525"></status>
+<msg timestamp="20200503 16:33:03.149" level="INFO">${end_city} = KAJAANI</msg>
+<status status="PASS" starttime="20200503 16:33:03.148" endtime="20200503 16:33:03.149"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -883,8 +883,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.526" level="INFO">${end_postalcode} = 87105</msg>
-<status status="PASS" starttime="20200423 01:19:19.525" endtime="20200423 01:19:19.526"></status>
+<msg timestamp="20200503 16:33:03.149" level="INFO">${end_postalcode} = 87105</msg>
+<status status="PASS" starttime="20200503 16:33:03.149" endtime="20200503 16:33:03.149"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -892,9 +892,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.526"></status>
+<status status="PASS" starttime="20200503 16:33:03.149" endtime="20200503 16:33:03.149"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.523" endtime="20200423 01:19:19.526"></status>
+<status status="PASS" starttime="20200503 16:33:03.146" endtime="20200503 16:33:03.149"></status>
 </kw>
 <kw name="${i} = 6" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -905,8 +905,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.526" level="INFO">${row_id} = 13</msg>
-<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.526"></status>
+<msg timestamp="20200503 16:33:03.149" level="INFO">${row_id} = 13</msg>
+<status status="PASS" starttime="20200503 16:33:03.149" endtime="20200503 16:33:03.149"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -917,8 +917,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.526" level="INFO">${start_street} = Laajankankaankatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.526"></status>
+<msg timestamp="20200503 16:33:03.150" level="INFO">${start_street} = Laajankankaankatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.149" endtime="20200503 16:33:03.150"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -929,8 +929,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.527" level="INFO">${start_number} = 2</msg>
-<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+<msg timestamp="20200503 16:33:03.150" level="INFO">${start_number} = 2</msg>
+<status status="PASS" starttime="20200503 16:33:03.150" endtime="20200503 16:33:03.150"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -941,8 +941,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.527" level="INFO">${start_city} = KAJAANI</msg>
-<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+<msg timestamp="20200503 16:33:03.150" level="INFO">${start_city} = KAJAANI</msg>
+<status status="PASS" starttime="20200503 16:33:03.150" endtime="20200503 16:33:03.150"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -953,8 +953,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.527" level="INFO">${start_postalcode} = 87504</msg>
-<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+<msg timestamp="20200503 16:33:03.150" level="INFO">${start_postalcode} = 87504</msg>
+<status status="PASS" starttime="20200503 16:33:03.150" endtime="20200503 16:33:03.150"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -962,7 +962,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.527" endtime="20200423 01:19:19.527"></status>
+<status status="PASS" starttime="20200503 16:33:03.150" endtime="20200503 16:33:03.151"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -972,8 +972,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.528" level="INFO">${row_id} = 13</msg>
-<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+<msg timestamp="20200503 16:33:03.151" level="INFO">${row_id} = 13</msg>
+<status status="PASS" starttime="20200503 16:33:03.151" endtime="20200503 16:33:03.151"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -984,8 +984,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.528" level="INFO">${end_street} = Oksapolku</msg>
-<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+<msg timestamp="20200503 16:33:03.151" level="INFO">${end_street} = Oksapolku</msg>
+<status status="PASS" starttime="20200503 16:33:03.151" endtime="20200503 16:33:03.151"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -996,8 +996,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.528" level="INFO">${end_number} = 1</msg>
-<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+<msg timestamp="20200503 16:33:03.151" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200503 16:33:03.151" endtime="20200503 16:33:03.151"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1008,8 +1008,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.528" level="INFO">${end_city} = JÄRVENPÄÄ</msg>
-<status status="PASS" starttime="20200423 01:19:19.528" endtime="20200423 01:19:19.528"></status>
+<msg timestamp="20200503 16:33:03.152" level="INFO">${end_city} = JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200503 16:33:03.152" endtime="20200503 16:33:03.152"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1020,8 +1020,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.529" level="INFO">${end_postalcode} = 4440</msg>
-<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+<msg timestamp="20200503 16:33:03.152" level="INFO">${end_postalcode} = 4440</msg>
+<status status="PASS" starttime="20200503 16:33:03.152" endtime="20200503 16:33:03.152"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1029,9 +1029,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+<status status="PASS" starttime="20200503 16:33:03.152" endtime="20200503 16:33:03.152"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.526" endtime="20200423 01:19:19.529"></status>
+<status status="PASS" starttime="20200503 16:33:03.149" endtime="20200503 16:33:03.152"></status>
 </kw>
 <kw name="${i} = 7" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -1042,8 +1042,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.529" level="INFO">${row_id} = 14</msg>
-<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+<msg timestamp="20200503 16:33:03.152" level="INFO">${row_id} = 14</msg>
+<status status="PASS" starttime="20200503 16:33:03.152" endtime="20200503 16:33:03.153"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1054,8 +1054,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.529" level="INFO">${start_street} = Magneettikatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.529"></status>
+<msg timestamp="20200503 16:33:03.153" level="INFO">${start_street} = Magneettikatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.153" endtime="20200503 16:33:03.153"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1066,8 +1066,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.530" level="INFO">${start_number} = 2</msg>
-<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+<msg timestamp="20200503 16:33:03.153" level="INFO">${start_number} = 2</msg>
+<status status="PASS" starttime="20200503 16:33:03.153" endtime="20200503 16:33:03.153"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1078,8 +1078,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.530" level="INFO">${start_city} = ESPOO</msg>
-<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+<msg timestamp="20200503 16:33:03.153" level="INFO">${start_city} = ESPOO</msg>
+<status status="PASS" starttime="20200503 16:33:03.153" endtime="20200503 16:33:03.153"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1090,8 +1090,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.530" level="INFO">${start_postalcode} = 2335</msg>
-<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+<msg timestamp="20200503 16:33:03.153" level="INFO">${start_postalcode} = 2335</msg>
+<status status="PASS" starttime="20200503 16:33:03.153" endtime="20200503 16:33:03.153"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1099,7 +1099,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.530"></status>
+<status status="PASS" starttime="20200503 16:33:03.154" endtime="20200503 16:33:03.154"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1109,8 +1109,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.531" level="INFO">${row_id} = 14</msg>
-<status status="PASS" starttime="20200423 01:19:19.530" endtime="20200423 01:19:19.531"></status>
+<msg timestamp="20200503 16:33:03.154" level="INFO">${row_id} = 14</msg>
+<status status="PASS" starttime="20200503 16:33:03.154" endtime="20200503 16:33:03.154"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1121,8 +1121,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.531" level="INFO">${end_street} = Esplanaadi</msg>
-<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.531"></status>
+<msg timestamp="20200503 16:33:03.154" level="INFO">${end_street} = Esplanaadi</msg>
+<status status="PASS" starttime="20200503 16:33:03.154" endtime="20200503 16:33:03.154"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1133,8 +1133,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.531" level="INFO">${end_number} = 69</msg>
-<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.531"></status>
+<msg timestamp="20200503 16:33:03.154" level="INFO">${end_number} = 69</msg>
+<status status="PASS" starttime="20200503 16:33:03.154" endtime="20200503 16:33:03.154"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1145,8 +1145,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.531" level="INFO">${end_city} = HANKO</msg>
-<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.531"></status>
+<msg timestamp="20200503 16:33:03.155" level="INFO">${end_city} = HANKO</msg>
+<status status="PASS" starttime="20200503 16:33:03.155" endtime="20200503 16:33:03.155"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1157,8 +1157,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.532" level="INFO">${end_postalcode} = 10904</msg>
-<status status="PASS" starttime="20200423 01:19:19.531" endtime="20200423 01:19:19.532"></status>
+<msg timestamp="20200503 16:33:03.155" level="INFO">${end_postalcode} = 10904</msg>
+<status status="PASS" starttime="20200503 16:33:03.155" endtime="20200503 16:33:03.155"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1166,9 +1166,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.532"></status>
+<status status="PASS" starttime="20200503 16:33:03.155" endtime="20200503 16:33:03.155"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.529" endtime="20200423 01:19:19.532"></status>
+<status status="PASS" starttime="20200503 16:33:03.152" endtime="20200503 16:33:03.155"></status>
 </kw>
 <kw name="${i} = 8" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -1179,8 +1179,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.532" level="INFO">${row_id} = 15</msg>
-<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.532"></status>
+<msg timestamp="20200503 16:33:03.155" level="INFO">${row_id} = 15</msg>
+<status status="PASS" starttime="20200503 16:33:03.155" endtime="20200503 16:33:03.156"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1191,8 +1191,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.533" level="INFO">${start_street} = Yhteiskouluntie</msg>
-<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.533"></status>
+<msg timestamp="20200503 16:33:03.156" level="INFO">${start_street} = Yhteiskouluntie</msg>
+<status status="PASS" starttime="20200503 16:33:03.156" endtime="20200503 16:33:03.156"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1203,8 +1203,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.533" level="INFO">${start_number} = 17</msg>
-<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.533"></status>
+<msg timestamp="20200503 16:33:03.156" level="INFO">${start_number} = 17</msg>
+<status status="PASS" starttime="20200503 16:33:03.156" endtime="20200503 16:33:03.156"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1215,8 +1215,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.533" level="INFO">${start_city} = JÄRVENPÄÄ</msg>
-<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.533"></status>
+<msg timestamp="20200503 16:33:03.156" level="INFO">${start_city} = JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200503 16:33:03.156" endtime="20200503 16:33:03.156"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1227,8 +1227,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.533" level="INFO">${start_postalcode} = 4404</msg>
-<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.533"></status>
+<msg timestamp="20200503 16:33:03.157" level="INFO">${start_postalcode} = 4404</msg>
+<status status="PASS" starttime="20200503 16:33:03.156" endtime="20200503 16:33:03.157"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1236,7 +1236,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.533" endtime="20200423 01:19:19.534"></status>
+<status status="PASS" starttime="20200503 16:33:03.157" endtime="20200503 16:33:03.157"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1246,8 +1246,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.534" level="INFO">${row_id} = 15</msg>
-<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.534"></status>
+<msg timestamp="20200503 16:33:03.157" level="INFO">${row_id} = 15</msg>
+<status status="PASS" starttime="20200503 16:33:03.157" endtime="20200503 16:33:03.157"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1258,8 +1258,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.534" level="INFO">${end_street} = Sallantie</msg>
-<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.534"></status>
+<msg timestamp="20200503 16:33:03.157" level="INFO">${end_street} = Sallantie</msg>
+<status status="PASS" starttime="20200503 16:33:03.157" endtime="20200503 16:33:03.157"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1270,8 +1270,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.534" level="INFO">${end_number} = 2640</msg>
-<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.534"></status>
+<msg timestamp="20200503 16:33:03.158" level="INFO">${end_number} = 2640</msg>
+<status status="PASS" starttime="20200503 16:33:03.157" endtime="20200503 16:33:03.158"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1282,8 +1282,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.535" level="INFO">${end_city} = KEMIJÄRVI</msg>
-<status status="PASS" starttime="20200423 01:19:19.534" endtime="20200423 01:19:19.535"></status>
+<msg timestamp="20200503 16:33:03.158" level="INFO">${end_city} = KEMIJÄRVI</msg>
+<status status="PASS" starttime="20200503 16:33:03.158" endtime="20200503 16:33:03.158"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1294,8 +1294,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.535" level="INFO">${end_postalcode} = 98714</msg>
-<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.535"></status>
+<msg timestamp="20200503 16:33:03.158" level="INFO">${end_postalcode} = 98714</msg>
+<status status="PASS" starttime="20200503 16:33:03.158" endtime="20200503 16:33:03.158"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1303,9 +1303,9 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.535"></status>
+<status status="PASS" starttime="20200503 16:33:03.158" endtime="20200503 16:33:03.158"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.532" endtime="20200423 01:19:19.535"></status>
+<status status="PASS" starttime="20200503 16:33:03.155" endtime="20200503 16:33:03.158"></status>
 </kw>
 <kw name="${i} = 9" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -1316,8 +1316,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.535" level="INFO">${row_id} = 16</msg>
-<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.535"></status>
+<msg timestamp="20200503 16:33:03.159" level="INFO">${row_id} = 16</msg>
+<status status="PASS" starttime="20200503 16:33:03.158" endtime="20200503 16:33:03.159"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1328,8 +1328,8 @@
 <assign>
 <var>${start_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.536" level="INFO">${start_street} = Ahlströminkatu</msg>
-<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.536"></status>
+<msg timestamp="20200503 16:33:03.159" level="INFO">${start_street} = Ahlströminkatu</msg>
+<status status="PASS" starttime="20200503 16:33:03.159" endtime="20200503 16:33:03.159"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1340,8 +1340,8 @@
 <assign>
 <var>${start_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.536" level="INFO">${start_number} = 21</msg>
-<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.536"></status>
+<msg timestamp="20200503 16:33:03.159" level="INFO">${start_number} = 21</msg>
+<status status="PASS" starttime="20200503 16:33:03.159" endtime="20200503 16:33:03.159"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1352,8 +1352,8 @@
 <assign>
 <var>${start_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.536" level="INFO">${start_city} = VARKAUS</msg>
-<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.536"></status>
+<msg timestamp="20200503 16:33:03.159" level="INFO">${start_city} = VARKAUS</msg>
+<status status="PASS" starttime="20200503 16:33:03.159" endtime="20200503 16:33:03.159"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1364,8 +1364,8 @@
 <assign>
 <var>${start_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.536" level="INFO">${start_postalcode} = 78254</msg>
-<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.536"></status>
+<msg timestamp="20200503 16:33:03.160" level="INFO">${start_postalcode} = 78254</msg>
+<status status="PASS" starttime="20200503 16:33:03.159" endtime="20200503 16:33:03.160"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1373,7 +1373,7 @@
 <arg>${TRAVEL_LIST_START}</arg>
 <arg>${start_street}, ${start_number}, ${start_postalcode} ${start_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.536" endtime="20200423 01:19:19.537"></status>
+<status status="PASS" starttime="20200503 16:33:03.160" endtime="20200503 16:33:03.160"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1383,8 +1383,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.537" level="INFO">${row_id} = 16</msg>
-<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.537"></status>
+<msg timestamp="20200503 16:33:03.160" level="INFO">${row_id} = 16</msg>
+<status status="PASS" starttime="20200503 16:33:03.160" endtime="20200503 16:33:03.160"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1395,8 +1395,8 @@
 <assign>
 <var>${end_street}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.537" level="INFO">${end_street} = Kilpivirrantie</msg>
-<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.537"></status>
+<msg timestamp="20200503 16:33:03.160" level="INFO">${end_street} = Kilpivirrantie</msg>
+<status status="PASS" starttime="20200503 16:33:03.160" endtime="20200503 16:33:03.160"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1407,8 +1407,8 @@
 <assign>
 <var>${end_number}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.537" level="INFO">${end_number} = 1</msg>
-<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.537"></status>
+<msg timestamp="20200503 16:33:03.161" level="INFO">${end_number} = 1</msg>
+<status status="PASS" starttime="20200503 16:33:03.160" endtime="20200503 16:33:03.161"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1419,8 +1419,8 @@
 <assign>
 <var>${end_city}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.538" level="INFO">${end_city} = IISALMI</msg>
-<status status="PASS" starttime="20200423 01:19:19.537" endtime="20200423 01:19:19.538"></status>
+<msg timestamp="20200503 16:33:03.161" level="INFO">${end_city} = IISALMI</msg>
+<status status="PASS" starttime="20200503 16:33:03.161" endtime="20200503 16:33:03.161"></status>
 </kw>
 <kw name="Read Excel Cell" library="ExcelLibrary">
 <doc>Returns content of a cell.</doc>
@@ -1431,8 +1431,8 @@
 <assign>
 <var>${end_postalcode}</var>
 </assign>
-<msg timestamp="20200423 01:19:19.538" level="INFO">${end_postalcode} = 74124</msg>
-<status status="PASS" starttime="20200423 01:19:19.538" endtime="20200423 01:19:19.538"></status>
+<msg timestamp="20200503 16:33:03.161" level="INFO">${end_postalcode} = 74124</msg>
+<status status="PASS" starttime="20200503 16:33:03.161" endtime="20200503 16:33:03.161"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1440,15 +1440,15 @@
 <arg>${TravelListEnd}</arg>
 <arg>${end_street}, ${end_number}, ${end_postalcode} ${end_city}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:19.538" endtime="20200423 01:19:19.538"></status>
+<status status="PASS" starttime="20200503 16:33:03.161" endtime="20200503 16:33:03.161"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.535" endtime="20200423 01:19:19.538"></status>
+<status status="PASS" starttime="20200503 16:33:03.158" endtime="20200503 16:33:03.161"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.507" endtime="20200423 01:19:19.538"></status>
+<status status="PASS" starttime="20200503 16:33:03.131" endtime="20200503 16:33:03.161"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.506" endtime="20200423 01:19:19.538"></status>
+<status status="PASS" starttime="20200503 16:33:03.130" endtime="20200503 16:33:03.161"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.506" endtime="20200423 01:19:19.538" critical="yes"></status>
+<status status="PASS" starttime="20200503 16:33:03.129" endtime="20200503 16:33:03.161" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Get Google Maps distances and write to Excel file">
 <kw name="Get Google Maps Distances And Write To Excel File" library="keywords">
@@ -1458,30 +1458,30 @@
 <arg>${BASE URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200423 01:19:19.539" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.fi/maps/dir/'.</msg>
-<status status="PASS" starttime="20200423 01:19:19.539" endtime="20200423 01:19:25.048"></status>
+<msg timestamp="20200503 16:33:03.162" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.fi/maps/dir/'.</msg>
+<status status="PASS" starttime="20200503 16:33:03.162" endtime="20200503 16:33:06.014"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>sb_ifc50</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:25.048" endtime="20200423 01:19:25.112"></status>
+<status status="PASS" starttime="20200503 16:33:06.015" endtime="20200503 16:33:06.083"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//*[contains(@data-travel_mode, "0")]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:25.112" level="INFO">Clicking element '//*[contains(@data-travel_mode, "0")]'.</msg>
-<status status="PASS" starttime="20200423 01:19:25.112" endtime="20200423 01:19:25.174"></status>
+<msg timestamp="20200503 16:33:06.083" level="INFO">Clicking element '//*[contains(@data-travel_mode, "0")]'.</msg>
+<status status="PASS" starttime="20200503 16:33:06.083" endtime="20200503 16:33:06.161"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>\n</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:25.174" endtime="20200423 01:19:25.174"></status>
+<status status="PASS" starttime="20200503 16:33:06.161" endtime="20200503 16:33:06.162"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${ROWS} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -1493,15 +1493,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:25.175" level="INFO">${current_id} = 1</msg>
-<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:25.175"></status>
+<msg timestamp="20200503 16:33:06.162" level="INFO">${current_id} = 1</msg>
+<status status="PASS" starttime="20200503 16:33:06.162" endtime="20200503 16:33:06.162"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:25.175"></status>
+<status status="PASS" starttime="20200503 16:33:06.162" endtime="20200503 16:33:06.162"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1509,9 +1509,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:25.176" level="INFO">Sending key(s) ('Kauppatie, 1, 81200 JOENSUU',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:25.614" level="INFO">Sending keys Kauppatie, 1, 81200 JOENSUU</msg>
-<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:25.854"></status>
+<msg timestamp="20200503 16:33:06.163" level="INFO">Sending key(s) ('Kauppatie, 1, 81200 JOENSUU',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:06.444" level="INFO">Sending keys Kauppatie, 1, 81200 JOENSUU</msg>
+<status status="PASS" starttime="20200503 16:33:06.162" endtime="20200503 16:33:06.737"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1519,9 +1519,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:25.855" level="INFO">Sending key(s) ('Vapaudenkatu, 10, 15114 LAHTI',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:26.179" level="INFO">Sending keys Vapaudenkatu, 10, 15114 LAHTI</msg>
-<status status="PASS" starttime="20200423 01:19:25.854" endtime="20200423 01:19:26.270"></status>
+<msg timestamp="20200503 16:33:06.737" level="INFO">Sending key(s) ('Vapaudenkatu, 10, 15114 LAHTI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:07.014" level="INFO">Sending keys Vapaudenkatu, 10, 15114 LAHTI</msg>
+<status status="PASS" starttime="20200503 16:33:06.737" endtime="20200503 16:33:07.086"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1529,32 +1529,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:26.271" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:26.567" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:26.567" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:26.271" endtime="20200423 01:19:26.575"></status>
+<msg timestamp="20200503 16:33:07.087" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:07.360" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:07.360" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:07.086" endtime="20200503 16:33:07.367"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:26.575" endtime="20200423 01:19:27.377"></status>
+<status status="PASS" starttime="20200503 16:33:07.368" endtime="20200503 16:33:09.061"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:27.378" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:27.377" endtime="20200423 01:19:27.463"></status>
+<msg timestamp="20200503 16:33:09.061" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:09.061" endtime="20200503 16:33:09.124"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:27.463" endtime="20200423 01:19:27.711"></status>
+<status status="PASS" starttime="20200503 16:33:09.124" endtime="20200503 16:33:09.363"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -1564,23 +1564,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:27.735" level="INFO">${trip} = (370 km)</msg>
-<status status="PASS" starttime="20200423 01:19:27.711" endtime="20200423 01:19:27.735"></status>
+<msg timestamp="20200503 16:33:09.379" level="INFO">${trip} = (370 km)</msg>
+<status status="PASS" starttime="20200503 16:33:09.363" endtime="20200503 16:33:09.379"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:27.735" endtime="20200423 01:19:27.735"></status>
+<status status="PASS" starttime="20200503 16:33:09.379" endtime="20200503 16:33:09.379"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:27.736" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:27.736" endtime="20200423 01:19:27.862"></status>
+<msg timestamp="20200503 16:33:09.379" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:09.379" endtime="20200503 16:33:09.419"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -1590,7 +1590,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:27.862" endtime="20200423 01:19:27.862"></status>
+<status status="PASS" starttime="20200503 16:33:09.419" endtime="20200503 16:33:09.419"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1600,8 +1600,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:27.863" level="INFO">${row_id} = 7</msg>
-<status status="PASS" starttime="20200423 01:19:27.862" endtime="20200423 01:19:27.863"></status>
+<msg timestamp="20200503 16:33:09.419" level="INFO">${row_id} = 7</msg>
+<status status="PASS" starttime="20200503 16:33:09.419" endtime="20200503 16:33:09.419"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -1610,8 +1610,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:27.863" level="INFO">${dist} = 370.0</msg>
-<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:27.863"></status>
+<msg timestamp="20200503 16:33:09.420" level="INFO">${dist} = 370.0</msg>
+<status status="PASS" starttime="20200503 16:33:09.419" endtime="20200503 16:33:09.420"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -1621,9 +1621,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:27.863"></status>
+<status status="PASS" starttime="20200503 16:33:09.420" endtime="20200503 16:33:09.420"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:25.175" endtime="20200423 01:19:27.863"></status>
+<status status="PASS" starttime="20200503 16:33:06.162" endtime="20200503 16:33:09.420"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -1634,15 +1634,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:27.864" level="INFO">${current_id} = 2</msg>
-<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:27.864"></status>
+<msg timestamp="20200503 16:33:09.420" level="INFO">${current_id} = 2</msg>
+<status status="PASS" starttime="20200503 16:33:09.420" endtime="20200503 16:33:09.420"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:27.864" endtime="20200423 01:19:27.864"></status>
+<status status="PASS" starttime="20200503 16:33:09.420" endtime="20200503 16:33:09.420"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1650,9 +1650,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:27.864" level="INFO">Sending key(s) ('Saarijärventie, 50, 40270 PALOKKA',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:28.192" level="INFO">Sending keys Saarijärventie, 50, 40270 PALOKKA</msg>
-<status status="PASS" starttime="20200423 01:19:27.864" endtime="20200423 01:19:28.282"></status>
+<msg timestamp="20200503 16:33:09.421" level="INFO">Sending key(s) ('Saarijärventie, 50, 40270 PALOKKA',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:09.721" level="INFO">Sending keys Saarijärventie, 50, 40270 PALOKKA</msg>
+<status status="PASS" starttime="20200503 16:33:09.420" endtime="20200503 16:33:09.838"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1660,9 +1660,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:28.282" level="INFO">Sending key(s) ('Sodankyläntie, 9, 98500 PELKOSENNIEMI',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:28.563" level="INFO">Sending keys Sodankyläntie, 9, 98500 PELKOSENNIEMI</msg>
-<status status="PASS" starttime="20200423 01:19:28.282" endtime="20200423 01:19:28.862"></status>
+<msg timestamp="20200503 16:33:09.838" level="INFO">Sending key(s) ('Sodankyläntie, 9, 98500 PELKOSENNIEMI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:10.113" level="INFO">Sending keys Sodankyläntie, 9, 98500 PELKOSENNIEMI</msg>
+<status status="PASS" starttime="20200503 16:33:09.838" endtime="20200503 16:33:10.197"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1670,32 +1670,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:28.863" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:29.154" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:29.154" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:28.863" endtime="20200423 01:19:29.161"></status>
+<msg timestamp="20200503 16:33:10.198" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:10.475" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:10.475" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:10.197" endtime="20200503 16:33:10.482"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:29.161" endtime="20200423 01:19:30.009"></status>
+<status status="PASS" starttime="20200503 16:33:10.482" endtime="20200503 16:33:11.536"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:30.009" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:30.009" endtime="20200423 01:19:30.040"></status>
+<msg timestamp="20200503 16:33:11.537" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:11.536" endtime="20200503 16:33:11.586"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:30.040" endtime="20200423 01:19:30.261"></status>
+<status status="PASS" starttime="20200503 16:33:11.586" endtime="20200503 16:33:11.819"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -1705,23 +1705,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:30.291" level="INFO">${trip} = (669 km)</msg>
-<status status="PASS" starttime="20200423 01:19:30.261" endtime="20200423 01:19:30.291"></status>
+<msg timestamp="20200503 16:33:11.834" level="INFO">${trip} = (669 km)</msg>
+<status status="PASS" starttime="20200503 16:33:11.820" endtime="20200503 16:33:11.834"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:30.291" endtime="20200423 01:19:30.292"></status>
+<status status="PASS" starttime="20200503 16:33:11.834" endtime="20200503 16:33:11.834"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:30.292" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:30.292" endtime="20200423 01:19:30.372"></status>
+<msg timestamp="20200503 16:33:11.834" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:11.834" endtime="20200503 16:33:11.868"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -1731,7 +1731,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:30.372" endtime="20200423 01:19:30.373"></status>
+<status status="PASS" starttime="20200503 16:33:11.868" endtime="20200503 16:33:11.868"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1741,8 +1741,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:30.373" level="INFO">${row_id} = 8</msg>
-<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:30.373"></status>
+<msg timestamp="20200503 16:33:11.868" level="INFO">${row_id} = 8</msg>
+<status status="PASS" starttime="20200503 16:33:11.868" endtime="20200503 16:33:11.868"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -1751,8 +1751,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:30.373" level="INFO">${dist} = 669.0</msg>
-<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:30.373"></status>
+<msg timestamp="20200503 16:33:11.868" level="INFO">${dist} = 669.0</msg>
+<status status="PASS" starttime="20200503 16:33:11.868" endtime="20200503 16:33:11.868"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -1762,9 +1762,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:30.373"></status>
+<status status="PASS" starttime="20200503 16:33:11.869" endtime="20200503 16:33:11.869"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:27.863" endtime="20200423 01:19:30.373"></status>
+<status status="PASS" starttime="20200503 16:33:09.420" endtime="20200503 16:33:11.869"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -1775,15 +1775,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:30.374" level="INFO">${current_id} = 3</msg>
-<status status="PASS" starttime="20200423 01:19:30.374" endtime="20200423 01:19:30.374"></status>
+<msg timestamp="20200503 16:33:11.869" level="INFO">${current_id} = 3</msg>
+<status status="PASS" starttime="20200503 16:33:11.869" endtime="20200503 16:33:11.869"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:30.374" endtime="20200423 01:19:30.374"></status>
+<status status="PASS" starttime="20200503 16:33:11.869" endtime="20200503 16:33:11.869"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1791,9 +1791,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:30.374" level="INFO">Sending key(s) ('Pitkäpellonkatu, 2, 20904 TURKU',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:30.657" level="INFO">Sending keys Pitkäpellonkatu, 2, 20904 TURKU</msg>
-<status status="PASS" starttime="20200423 01:19:30.374" endtime="20200423 01:19:30.766"></status>
+<msg timestamp="20200503 16:33:11.870" level="INFO">Sending key(s) ('Pitkäpellonkatu, 2, 20904 TURKU',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:12.164" level="INFO">Sending keys Pitkäpellonkatu, 2, 20904 TURKU</msg>
+<status status="PASS" starttime="20200503 16:33:11.869" endtime="20200503 16:33:12.249"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1801,9 +1801,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:30.767" level="INFO">Sending key(s) ('Sipulikatu, 2, 70824 KUOPIO',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:31.045" level="INFO">Sending keys Sipulikatu, 2, 70824 KUOPIO</msg>
-<status status="PASS" starttime="20200423 01:19:30.766" endtime="20200423 01:19:31.179"></status>
+<msg timestamp="20200503 16:33:12.250" level="INFO">Sending key(s) ('Sipulikatu, 2, 70824 KUOPIO',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:12.534" level="INFO">Sending keys Sipulikatu, 2, 70824 KUOPIO</msg>
+<status status="PASS" starttime="20200503 16:33:12.249" endtime="20200503 16:33:12.643"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1811,32 +1811,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:31.180" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:31.471" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:31.471" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:31.179" endtime="20200423 01:19:31.568"></status>
+<msg timestamp="20200503 16:33:12.643" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:12.910" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:12.910" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:12.643" endtime="20200503 16:33:12.917"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:31.568" endtime="20200423 01:19:32.536"></status>
+<status status="PASS" starttime="20200503 16:33:12.917" endtime="20200503 16:33:13.758"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:32.536" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:32.536" endtime="20200423 01:19:32.751"></status>
+<msg timestamp="20200503 16:33:13.759" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:13.759" endtime="20200503 16:33:13.785"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:32.751" endtime="20200423 01:19:33.125"></status>
+<status status="PASS" starttime="20200503 16:33:13.786" endtime="20200503 16:33:14.011"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -1846,23 +1846,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:33.137" level="INFO">${trip} = (455 km)</msg>
-<status status="PASS" starttime="20200423 01:19:33.125" endtime="20200423 01:19:33.137"></status>
+<msg timestamp="20200503 16:33:14.021" level="INFO">${trip} = (455 km)</msg>
+<status status="PASS" starttime="20200503 16:33:14.011" endtime="20200503 16:33:14.021"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:33.137" endtime="20200423 01:19:33.137"></status>
+<status status="PASS" starttime="20200503 16:33:14.022" endtime="20200503 16:33:14.022"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:33.138" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:33.138" endtime="20200423 01:19:33.180"></status>
+<msg timestamp="20200503 16:33:14.022" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:14.022" endtime="20200503 16:33:14.070"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -1872,7 +1872,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:33.180" endtime="20200423 01:19:33.181"></status>
+<status status="PASS" starttime="20200503 16:33:14.070" endtime="20200503 16:33:14.070"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1882,8 +1882,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:33.181" level="INFO">${row_id} = 9</msg>
-<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:33.181"></status>
+<msg timestamp="20200503 16:33:14.071" level="INFO">${row_id} = 9</msg>
+<status status="PASS" starttime="20200503 16:33:14.070" endtime="20200503 16:33:14.071"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -1892,8 +1892,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:33.181" level="INFO">${dist} = 455.0</msg>
-<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:33.181"></status>
+<msg timestamp="20200503 16:33:14.071" level="INFO">${dist} = 455.0</msg>
+<status status="PASS" starttime="20200503 16:33:14.071" endtime="20200503 16:33:14.071"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -1903,9 +1903,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:33.181"></status>
+<status status="PASS" starttime="20200503 16:33:14.071" endtime="20200503 16:33:14.071"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:30.373" endtime="20200423 01:19:33.181"></status>
+<status status="PASS" starttime="20200503 16:33:11.869" endtime="20200503 16:33:14.071"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -1916,15 +1916,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:33.182" level="INFO">${current_id} = 4</msg>
-<status status="PASS" starttime="20200423 01:19:33.182" endtime="20200423 01:19:33.182"></status>
+<msg timestamp="20200503 16:33:14.071" level="INFO">${current_id} = 4</msg>
+<status status="PASS" starttime="20200503 16:33:14.071" endtime="20200503 16:33:14.071"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:33.182" endtime="20200423 01:19:33.182"></status>
+<status status="PASS" starttime="20200503 16:33:14.071" endtime="20200503 16:33:14.072"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1932,9 +1932,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:33.182" level="INFO">Sending key(s) ('Tyynylaavantie, 5, 980 HELSINKI',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:33.476" level="INFO">Sending keys Tyynylaavantie, 5, 980 HELSINKI</msg>
-<status status="PASS" starttime="20200423 01:19:33.182" endtime="20200423 01:19:33.584"></status>
+<msg timestamp="20200503 16:33:14.072" level="INFO">Sending key(s) ('Tyynylaavantie, 5, 980 HELSINKI',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:14.383" level="INFO">Sending keys Tyynylaavantie, 5, 980 HELSINKI</msg>
+<status status="PASS" starttime="20200503 16:33:14.072" endtime="20200503 16:33:14.462"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1942,9 +1942,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:33.584" level="INFO">Sending key(s) ('Kaskelantie, 5, 1204 VANTAA',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:33.859" level="INFO">Sending keys Kaskelantie, 5, 1204 VANTAA</msg>
-<status status="PASS" starttime="20200423 01:19:33.584" endtime="20200423 01:19:33.949"></status>
+<msg timestamp="20200503 16:33:14.463" level="INFO">Sending key(s) ('Kaskelantie, 5, 1204 VANTAA',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:14.731" level="INFO">Sending keys Kaskelantie, 5, 1204 VANTAA</msg>
+<status status="PASS" starttime="20200503 16:33:14.462" endtime="20200503 16:33:14.796"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -1952,32 +1952,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:33.949" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:34.226" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:34.226" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:33.949" endtime="20200423 01:19:34.242"></status>
+<msg timestamp="20200503 16:33:14.797" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:15.062" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:15.062" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:14.796" endtime="20200503 16:33:15.068"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:34.242" endtime="20200423 01:19:34.900"></status>
+<status status="PASS" starttime="20200503 16:33:15.068" endtime="20200503 16:33:15.703"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:34.900" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:34.900" endtime="20200423 01:19:34.946"></status>
+<msg timestamp="20200503 16:33:15.703" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:15.703" endtime="20200503 16:33:15.757"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:34.946" endtime="20200423 01:19:35.175"></status>
+<status status="PASS" starttime="20200503 16:33:15.757" endtime="20200503 16:33:15.983"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -1987,23 +1987,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:35.188" level="INFO">${trip} = (12,0 km)</msg>
-<status status="PASS" starttime="20200423 01:19:35.175" endtime="20200423 01:19:35.188"></status>
+<msg timestamp="20200503 16:33:15.997" level="INFO">${trip} = (12,0 km)</msg>
+<status status="PASS" starttime="20200503 16:33:15.983" endtime="20200503 16:33:15.997"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:35.188" endtime="20200423 01:19:35.188"></status>
+<status status="PASS" starttime="20200503 16:33:15.997" endtime="20200503 16:33:15.997"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:35.188" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:35.188" endtime="20200423 01:19:35.226"></status>
+<msg timestamp="20200503 16:33:15.997" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:15.997" endtime="20200503 16:33:16.052"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2013,7 +2013,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:35.226" endtime="20200423 01:19:35.227"></status>
+<status status="PASS" starttime="20200503 16:33:16.053" endtime="20200503 16:33:16.053"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2023,8 +2023,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:35.227" level="INFO">${row_id} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:35.227"></status>
+<msg timestamp="20200503 16:33:16.053" level="INFO">${row_id} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:16.053" endtime="20200503 16:33:16.053"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2033,8 +2033,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:35.227" level="INFO">${dist} = 12.0</msg>
-<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:35.227"></status>
+<msg timestamp="20200503 16:33:16.053" level="INFO">${dist} = 12.0</msg>
+<status status="PASS" starttime="20200503 16:33:16.053" endtime="20200503 16:33:16.053"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2044,9 +2044,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:35.227"></status>
+<status status="PASS" starttime="20200503 16:33:16.053" endtime="20200503 16:33:16.054"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:33.181" endtime="20200423 01:19:35.227"></status>
+<status status="PASS" starttime="20200503 16:33:14.071" endtime="20200503 16:33:16.054"></status>
 </kw>
 <kw name="${i} = 4" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -2057,15 +2057,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:35.228" level="INFO">${current_id} = 5</msg>
-<status status="PASS" starttime="20200423 01:19:35.228" endtime="20200423 01:19:35.228"></status>
+<msg timestamp="20200503 16:33:16.054" level="INFO">${current_id} = 5</msg>
+<status status="PASS" starttime="20200503 16:33:16.054" endtime="20200503 16:33:16.054"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:35.228" endtime="20200423 01:19:35.228"></status>
+<status status="PASS" starttime="20200503 16:33:16.054" endtime="20200503 16:33:16.054"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2073,9 +2073,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:35.228" level="INFO">Sending key(s) ('Ilmarinkatu, 49, 33504 TAMPERE',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:35.511" level="INFO">Sending keys Ilmarinkatu, 49, 33504 TAMPERE</msg>
-<status status="PASS" starttime="20200423 01:19:35.228" endtime="20200423 01:19:35.610"></status>
+<msg timestamp="20200503 16:33:16.055" level="INFO">Sending key(s) ('Ilmarinkatu, 49, 33504 TAMPERE',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:16.351" level="INFO">Sending keys Ilmarinkatu, 49, 33504 TAMPERE</msg>
+<status status="PASS" starttime="20200503 16:33:16.054" endtime="20200503 16:33:16.424"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2083,9 +2083,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:35.610" level="INFO">Sending key(s) ('Tuulosentie, 1, 14814 TUULOS',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:35.906" level="INFO">Sending keys Tuulosentie, 1, 14814 TUULOS</msg>
-<status status="PASS" starttime="20200423 01:19:35.610" endtime="20200423 01:19:36.103"></status>
+<msg timestamp="20200503 16:33:16.425" level="INFO">Sending key(s) ('Tuulosentie, 1, 14814 TUULOS',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:16.731" level="INFO">Sending keys Tuulosentie, 1, 14814 TUULOS</msg>
+<status status="PASS" starttime="20200503 16:33:16.424" endtime="20200503 16:33:16.887"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2093,32 +2093,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:36.104" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:36.489" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:36.489" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:36.104" endtime="20200423 01:19:36.495"></status>
+<msg timestamp="20200503 16:33:16.887" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:17.212" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:17.212" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:16.887" endtime="20200503 16:33:17.279"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:36.496" endtime="20200423 01:19:37.287"></status>
+<status status="PASS" starttime="20200503 16:33:17.279" endtime="20200503 16:33:18.062"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:37.287" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:37.287" endtime="20200423 01:19:37.503"></status>
+<msg timestamp="20200503 16:33:18.062" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:18.062" endtime="20200503 16:33:18.278"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:37.504" endtime="20200423 01:19:38.080"></status>
+<status status="PASS" starttime="20200503 16:33:18.278" endtime="20200503 16:33:18.789"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -2128,23 +2128,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:38.093" level="INFO">${trip} = (79,4 km)</msg>
-<status status="PASS" starttime="20200423 01:19:38.080" endtime="20200423 01:19:38.093"></status>
+<msg timestamp="20200503 16:33:18.804" level="INFO">${trip} = (79,4 km)</msg>
+<status status="PASS" starttime="20200503 16:33:18.789" endtime="20200503 16:33:18.804"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:38.093" endtime="20200423 01:19:38.094"></status>
+<status status="PASS" starttime="20200503 16:33:18.804" endtime="20200503 16:33:18.804"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:38.094" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:38.094" endtime="20200423 01:19:38.127"></status>
+<msg timestamp="20200503 16:33:18.804" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:18.804" endtime="20200503 16:33:18.852"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2154,7 +2154,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.128"></status>
+<status status="PASS" starttime="20200503 16:33:18.852" endtime="20200503 16:33:18.852"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2164,8 +2164,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:38.128" level="INFO">${row_id} = 11</msg>
-<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.128"></status>
+<msg timestamp="20200503 16:33:18.853" level="INFO">${row_id} = 11</msg>
+<status status="PASS" starttime="20200503 16:33:18.853" endtime="20200503 16:33:18.853"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2174,8 +2174,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:38.128" level="INFO">${dist} = 79.4</msg>
-<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.128"></status>
+<msg timestamp="20200503 16:33:18.853" level="INFO">${dist} = 79.4</msg>
+<status status="PASS" starttime="20200503 16:33:18.853" endtime="20200503 16:33:18.853"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2185,9 +2185,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:38.128" endtime="20200423 01:19:38.129"></status>
+<status status="PASS" starttime="20200503 16:33:18.853" endtime="20200503 16:33:18.853"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:35.227" endtime="20200423 01:19:38.129"></status>
+<status status="PASS" starttime="20200503 16:33:16.054" endtime="20200503 16:33:18.853"></status>
 </kw>
 <kw name="${i} = 5" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -2198,15 +2198,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:38.129" level="INFO">${current_id} = 6</msg>
-<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:38.129"></status>
+<msg timestamp="20200503 16:33:18.854" level="INFO">${current_id} = 6</msg>
+<status status="PASS" starttime="20200503 16:33:18.853" endtime="20200503 16:33:18.854"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:38.129"></status>
+<status status="PASS" starttime="20200503 16:33:18.854" endtime="20200503 16:33:18.854"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2214,9 +2214,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:38.129" level="INFO">Sending key(s) ('Vasarakatu, 29, 40325 JYVÄSKYLÄ',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:38.415" level="INFO">Sending keys Vasarakatu, 29, 40325 JYVÄSKYLÄ</msg>
-<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:38.528"></status>
+<msg timestamp="20200503 16:33:18.854" level="INFO">Sending key(s) ('Vasarakatu, 29, 40325 JYVÄSKYLÄ',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:19.135" level="INFO">Sending keys Vasarakatu, 29, 40325 JYVÄSKYLÄ</msg>
+<status status="PASS" starttime="20200503 16:33:18.854" endtime="20200503 16:33:19.212"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2224,9 +2224,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:38.529" level="INFO">Sending key(s) ('Veturitie, 1, 87105 KAJAANI',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:38.809" level="INFO">Sending keys Veturitie, 1, 87105 KAJAANI</msg>
-<status status="PASS" starttime="20200423 01:19:38.528" endtime="20200423 01:19:38.907"></status>
+<msg timestamp="20200503 16:33:19.213" level="INFO">Sending key(s) ('Veturitie, 1, 87105 KAJAANI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:19.482" level="INFO">Sending keys Veturitie, 1, 87105 KAJAANI</msg>
+<status status="PASS" starttime="20200503 16:33:19.213" endtime="20200503 16:33:19.594"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2234,32 +2234,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:38.907" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:39.174" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:39.174" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:38.907" endtime="20200423 01:19:39.182"></status>
+<msg timestamp="20200503 16:33:19.594" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:19.888" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:19.888" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:19.594" endtime="20200503 16:33:19.903"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:39.182" endtime="20200423 01:19:40.045"></status>
+<status status="PASS" starttime="20200503 16:33:19.903" endtime="20200503 16:33:20.769"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:40.045" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:40.045" endtime="20200423 01:19:40.095"></status>
+<msg timestamp="20200503 16:33:20.769" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:20.769" endtime="20200503 16:33:20.821"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:40.095" endtime="20200423 01:19:40.310"></status>
+<status status="PASS" starttime="20200503 16:33:20.821" endtime="20200503 16:33:21.037"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -2269,23 +2269,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:40.321" level="INFO">${trip} = (319 km)</msg>
-<status status="PASS" starttime="20200423 01:19:40.310" endtime="20200423 01:19:40.321"></status>
+<msg timestamp="20200503 16:33:21.050" level="INFO">${trip} = (319 km)</msg>
+<status status="PASS" starttime="20200503 16:33:21.037" endtime="20200503 16:33:21.050"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:40.321" endtime="20200423 01:19:40.321"></status>
+<status status="PASS" starttime="20200503 16:33:21.050" endtime="20200503 16:33:21.050"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:40.321" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:40.321" endtime="20200423 01:19:40.364"></status>
+<msg timestamp="20200503 16:33:21.050" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:21.050" endtime="20200503 16:33:21.087"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2295,7 +2295,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:40.364" endtime="20200423 01:19:40.364"></status>
+<status status="PASS" starttime="20200503 16:33:21.087" endtime="20200503 16:33:21.087"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2305,8 +2305,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:40.364" level="INFO">${row_id} = 12</msg>
-<status status="PASS" starttime="20200423 01:19:40.364" endtime="20200423 01:19:40.364"></status>
+<msg timestamp="20200503 16:33:21.088" level="INFO">${row_id} = 12</msg>
+<status status="PASS" starttime="20200503 16:33:21.088" endtime="20200503 16:33:21.088"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2315,8 +2315,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:40.364" level="INFO">${dist} = 319.0</msg>
-<status status="PASS" starttime="20200423 01:19:40.364" endtime="20200423 01:19:40.364"></status>
+<msg timestamp="20200503 16:33:21.088" level="INFO">${dist} = 319.0</msg>
+<status status="PASS" starttime="20200503 16:33:21.088" endtime="20200503 16:33:21.088"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2326,9 +2326,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.365"></status>
+<status status="PASS" starttime="20200503 16:33:21.088" endtime="20200503 16:33:21.088"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:38.129" endtime="20200423 01:19:40.365"></status>
+<status status="PASS" starttime="20200503 16:33:18.853" endtime="20200503 16:33:21.088"></status>
 </kw>
 <kw name="${i} = 6" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -2339,15 +2339,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:40.365" level="INFO">${current_id} = 7</msg>
-<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.365"></status>
+<msg timestamp="20200503 16:33:21.088" level="INFO">${current_id} = 7</msg>
+<status status="PASS" starttime="20200503 16:33:21.088" endtime="20200503 16:33:21.089"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.365"></status>
+<status status="PASS" starttime="20200503 16:33:21.089" endtime="20200503 16:33:21.089"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2355,9 +2355,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:40.366" level="INFO">Sending key(s) ('Laajankankaankatu, 2, 87504 KAJAANI',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:40.645" level="INFO">Sending keys Laajankankaankatu, 2, 87504 KAJAANI</msg>
-<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:40.733"></status>
+<msg timestamp="20200503 16:33:21.089" level="INFO">Sending key(s) ('Laajankankaankatu, 2, 87504 KAJAANI',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:21.387" level="INFO">Sending keys Laajankankaankatu, 2, 87504 KAJAANI</msg>
+<status status="PASS" starttime="20200503 16:33:21.089" endtime="20200503 16:33:21.486"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2365,9 +2365,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:40.733" level="INFO">Sending key(s) ('Oksapolku, 1, 4440 JÄRVENPÄÄ',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:41.015" level="INFO">Sending keys Oksapolku, 1, 4440 JÄRVENPÄÄ</msg>
-<status status="PASS" starttime="20200423 01:19:40.733" endtime="20200423 01:19:41.122"></status>
+<msg timestamp="20200503 16:33:21.486" level="INFO">Sending key(s) ('Oksapolku, 1, 4440 JÄRVENPÄÄ',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:21.793" level="INFO">Sending keys Oksapolku, 1, 4440 JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200503 16:33:21.486" endtime="20200503 16:33:21.896"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2375,32 +2375,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:41.122" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:41.386" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:41.386" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:41.122" endtime="20200423 01:19:41.393"></status>
+<msg timestamp="20200503 16:33:21.896" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:22.164" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:22.164" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:21.896" endtime="20200503 16:33:22.170"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:41.393" endtime="20200423 01:19:42.232"></status>
+<status status="PASS" starttime="20200503 16:33:22.170" endtime="20200503 16:33:23.017"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:42.233" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:42.233" endtime="20200423 01:19:42.279"></status>
+<msg timestamp="20200503 16:33:23.017" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:23.017" endtime="20200503 16:33:23.058"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:42.279" endtime="20200423 01:19:42.498"></status>
+<status status="PASS" starttime="20200503 16:33:23.058" endtime="20200503 16:33:23.288"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -2410,23 +2410,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:42.511" level="INFO">${trip} = (516 km)</msg>
-<status status="PASS" starttime="20200423 01:19:42.498" endtime="20200423 01:19:42.511"></status>
+<msg timestamp="20200503 16:33:23.311" level="INFO">${trip} = (516 km)</msg>
+<status status="PASS" starttime="20200503 16:33:23.289" endtime="20200503 16:33:23.311"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:42.511" endtime="20200423 01:19:42.512"></status>
+<status status="PASS" starttime="20200503 16:33:23.311" endtime="20200503 16:33:23.312"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:42.512" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:42.512" endtime="20200423 01:19:42.549"></status>
+<msg timestamp="20200503 16:33:23.312" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:23.312" endtime="20200503 16:33:23.354"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2436,7 +2436,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:42.549" endtime="20200423 01:19:42.550"></status>
+<status status="PASS" starttime="20200503 16:33:23.354" endtime="20200503 16:33:23.354"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2446,8 +2446,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:42.550" level="INFO">${row_id} = 13</msg>
-<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.550"></status>
+<msg timestamp="20200503 16:33:23.355" level="INFO">${row_id} = 13</msg>
+<status status="PASS" starttime="20200503 16:33:23.355" endtime="20200503 16:33:23.355"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2456,8 +2456,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:42.550" level="INFO">${dist} = 516.0</msg>
-<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.550"></status>
+<msg timestamp="20200503 16:33:23.355" level="INFO">${dist} = 516.0</msg>
+<status status="PASS" starttime="20200503 16:33:23.355" endtime="20200503 16:33:23.355"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2467,9 +2467,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.550"></status>
+<status status="PASS" starttime="20200503 16:33:23.355" endtime="20200503 16:33:23.355"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:40.365" endtime="20200423 01:19:42.550"></status>
+<status status="PASS" starttime="20200503 16:33:21.088" endtime="20200503 16:33:23.355"></status>
 </kw>
 <kw name="${i} = 7" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -2480,15 +2480,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:42.551" level="INFO">${current_id} = 8</msg>
-<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:42.551"></status>
+<msg timestamp="20200503 16:33:23.356" level="INFO">${current_id} = 8</msg>
+<status status="PASS" starttime="20200503 16:33:23.355" endtime="20200503 16:33:23.356"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:42.551" endtime="20200423 01:19:42.551"></status>
+<status status="PASS" starttime="20200503 16:33:23.356" endtime="20200503 16:33:23.356"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2496,9 +2496,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:42.551" level="INFO">Sending key(s) ('Magneettikatu, 2, 2335 ESPOO',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:42.845" level="INFO">Sending keys Magneettikatu, 2, 2335 ESPOO</msg>
-<status status="PASS" starttime="20200423 01:19:42.551" endtime="20200423 01:19:42.918"></status>
+<msg timestamp="20200503 16:33:23.356" level="INFO">Sending key(s) ('Magneettikatu, 2, 2335 ESPOO',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:23.653" level="INFO">Sending keys Magneettikatu, 2, 2335 ESPOO</msg>
+<status status="PASS" starttime="20200503 16:33:23.356" endtime="20200503 16:33:23.724"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2506,9 +2506,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:42.918" level="INFO">Sending key(s) ('Esplanaadi, 69, 10904 HANKO',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:43.198" level="INFO">Sending keys Esplanaadi, 69, 10904 HANKO</msg>
-<status status="PASS" starttime="20200423 01:19:42.918" endtime="20200423 01:19:43.343"></status>
+<msg timestamp="20200503 16:33:23.724" level="INFO">Sending key(s) ('Esplanaadi, 69, 10904 HANKO',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:24.020" level="INFO">Sending keys Esplanaadi, 69, 10904 HANKO</msg>
+<status status="PASS" starttime="20200503 16:33:23.724" endtime="20200503 16:33:24.138"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2516,32 +2516,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:43.343" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:43.617" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:43.617" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:43.343" endtime="20200423 01:19:43.664"></status>
+<msg timestamp="20200503 16:33:24.138" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:24.422" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:24.422" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:24.138" endtime="20200503 16:33:24.429"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:43.664" endtime="20200423 01:19:44.319"></status>
+<status status="PASS" starttime="20200503 16:33:24.429" endtime="20200503 16:33:25.270"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:44.320" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:44.320" endtime="20200423 01:19:44.363"></status>
+<msg timestamp="20200503 16:33:25.270" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:25.270" endtime="20200503 16:33:25.305"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:44.363" endtime="20200423 01:19:44.581"></status>
+<status status="PASS" starttime="20200503 16:33:25.305" endtime="20200503 16:33:25.522"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -2551,23 +2551,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:44.595" level="INFO">${trip} = (109 km)</msg>
-<status status="PASS" starttime="20200423 01:19:44.581" endtime="20200423 01:19:44.595"></status>
+<msg timestamp="20200503 16:33:25.536" level="INFO">${trip} = (109 km)</msg>
+<status status="PASS" starttime="20200503 16:33:25.523" endtime="20200503 16:33:25.536"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:44.595" endtime="20200423 01:19:44.596"></status>
+<status status="PASS" starttime="20200503 16:33:25.536" endtime="20200503 16:33:25.536"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:44.596" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:44.596" endtime="20200423 01:19:44.630"></status>
+<msg timestamp="20200503 16:33:25.536" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:25.536" endtime="20200503 16:33:25.572"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2577,7 +2577,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:44.630" endtime="20200423 01:19:44.631"></status>
+<status status="PASS" starttime="20200503 16:33:25.572" endtime="20200503 16:33:25.572"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2587,8 +2587,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:44.631" level="INFO">${row_id} = 14</msg>
-<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.631"></status>
+<msg timestamp="20200503 16:33:25.572" level="INFO">${row_id} = 14</msg>
+<status status="PASS" starttime="20200503 16:33:25.572" endtime="20200503 16:33:25.572"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2597,8 +2597,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:44.631" level="INFO">${dist} = 109.0</msg>
-<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.631"></status>
+<msg timestamp="20200503 16:33:25.573" level="INFO">${dist} = 109.0</msg>
+<status status="PASS" starttime="20200503 16:33:25.573" endtime="20200503 16:33:25.573"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2608,9 +2608,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.631"></status>
+<status status="PASS" starttime="20200503 16:33:25.573" endtime="20200503 16:33:25.573"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:42.550" endtime="20200423 01:19:44.631"></status>
+<status status="PASS" starttime="20200503 16:33:23.355" endtime="20200503 16:33:25.573"></status>
 </kw>
 <kw name="${i} = 8" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -2621,15 +2621,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:44.632" level="INFO">${current_id} = 9</msg>
-<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:44.632"></status>
+<msg timestamp="20200503 16:33:25.573" level="INFO">${current_id} = 9</msg>
+<status status="PASS" starttime="20200503 16:33:25.573" endtime="20200503 16:33:25.573"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:44.632" endtime="20200423 01:19:44.632"></status>
+<status status="PASS" starttime="20200503 16:33:25.573" endtime="20200503 16:33:25.573"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2637,9 +2637,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:44.632" level="INFO">Sending key(s) ('Yhteiskouluntie, 17, 4404 JÄRVENPÄÄ',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:44.915" level="INFO">Sending keys Yhteiskouluntie, 17, 4404 JÄRVENPÄÄ</msg>
-<status status="PASS" starttime="20200423 01:19:44.632" endtime="20200423 01:19:44.999"></status>
+<msg timestamp="20200503 16:33:25.574" level="INFO">Sending key(s) ('Yhteiskouluntie, 17, 4404 JÄRVENPÄÄ',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:25.853" level="INFO">Sending keys Yhteiskouluntie, 17, 4404 JÄRVENPÄÄ</msg>
+<status status="PASS" starttime="20200503 16:33:25.574" endtime="20200503 16:33:25.941"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2647,9 +2647,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:45.000" level="INFO">Sending key(s) ('Sallantie, 2640, 98714 KEMIJÄRVI',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:45.276" level="INFO">Sending keys Sallantie, 2640, 98714 KEMIJÄRVI</msg>
-<status status="PASS" starttime="20200423 01:19:44.999" endtime="20200423 01:19:45.346"></status>
+<msg timestamp="20200503 16:33:25.942" level="INFO">Sending key(s) ('Sallantie, 2640, 98714 KEMIJÄRVI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:26.225" level="INFO">Sending keys Sallantie, 2640, 98714 KEMIJÄRVI</msg>
+<status status="PASS" starttime="20200503 16:33:25.941" endtime="20200503 16:33:26.324"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2657,32 +2657,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:45.347" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:45.625" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:45.626" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:45.346" endtime="20200423 01:19:45.632"></status>
+<msg timestamp="20200503 16:33:26.324" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:26.604" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:26.604" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:26.324" endtime="20200503 16:33:26.611"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:45.632" endtime="20200423 01:19:46.682"></status>
+<status status="PASS" starttime="20200503 16:33:26.611" endtime="20200503 16:33:27.729"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:46.683" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:46.683" endtime="20200423 01:19:46.713"></status>
+<msg timestamp="20200503 16:33:27.730" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:27.729" endtime="20200503 16:33:27.772"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:46.713" endtime="20200423 01:19:46.931"></status>
+<status status="PASS" starttime="20200503 16:33:27.772" endtime="20200503 16:33:27.987"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -2692,23 +2692,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:46.944" level="INFO">${trip} = (874 km)</msg>
-<status status="PASS" starttime="20200423 01:19:46.931" endtime="20200423 01:19:46.944"></status>
+<msg timestamp="20200503 16:33:28.000" level="INFO">${trip} = (874 km)</msg>
+<status status="PASS" starttime="20200503 16:33:27.987" endtime="20200503 16:33:28.001"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:46.944" endtime="20200423 01:19:46.944"></status>
+<status status="PASS" starttime="20200503 16:33:28.001" endtime="20200503 16:33:28.001"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:46.944" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:46.944" endtime="20200423 01:19:46.984"></status>
+<msg timestamp="20200503 16:33:28.001" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:28.001" endtime="20200503 16:33:28.039"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2718,7 +2718,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:46.984" endtime="20200423 01:19:46.985"></status>
+<status status="PASS" starttime="20200503 16:33:28.039" endtime="20200503 16:33:28.040"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2728,8 +2728,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:46.985" level="INFO">${row_id} = 15</msg>
-<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:46.985"></status>
+<msg timestamp="20200503 16:33:28.040" level="INFO">${row_id} = 15</msg>
+<status status="PASS" starttime="20200503 16:33:28.040" endtime="20200503 16:33:28.040"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2738,8 +2738,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:46.985" level="INFO">${dist} = 874.0</msg>
-<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:46.985"></status>
+<msg timestamp="20200503 16:33:28.040" level="INFO">${dist} = 874.0</msg>
+<status status="PASS" starttime="20200503 16:33:28.040" endtime="20200503 16:33:28.040"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2749,9 +2749,9 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:46.985"></status>
+<status status="PASS" starttime="20200503 16:33:28.040" endtime="20200503 16:33:28.040"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:44.631" endtime="20200423 01:19:46.985"></status>
+<status status="PASS" starttime="20200503 16:33:25.573" endtime="20200503 16:33:28.040"></status>
 </kw>
 <kw name="${i} = 9" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -2762,15 +2762,15 @@
 <assign>
 <var>${current_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:46.986" level="INFO">${current_id} = 10</msg>
-<status status="PASS" starttime="20200423 01:19:46.986" endtime="20200423 01:19:46.986"></status>
+<msg timestamp="20200503 16:33:28.041" level="INFO">${current_id} = 10</msg>
+<status status="PASS" starttime="20200503 16:33:28.040" endtime="20200503 16:33:28.041"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Distance: ${current_id}/${ROWS}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:46.986" endtime="20200423 01:19:46.986"></status>
+<status status="PASS" starttime="20200503 16:33:28.041" endtime="20200503 16:33:28.041"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2778,9 +2778,9 @@
 <arg>sb_ifc50</arg>
 <arg>@{TRAVEL_LIST_START}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:46.986" level="INFO">Sending key(s) ('Ahlströminkatu, 21, 78254 VARKAUS',) to sb_ifc50 element.</msg>
-<msg timestamp="20200423 01:19:47.296" level="INFO">Sending keys Ahlströminkatu, 21, 78254 VARKAUS</msg>
-<status status="PASS" starttime="20200423 01:19:46.986" endtime="20200423 01:19:47.381"></status>
+<msg timestamp="20200503 16:33:28.041" level="INFO">Sending key(s) ('Ahlströminkatu, 21, 78254 VARKAUS',) to sb_ifc50 element.</msg>
+<msg timestamp="20200503 16:33:28.387" level="INFO">Sending keys Ahlströminkatu, 21, 78254 VARKAUS</msg>
+<status status="PASS" starttime="20200503 16:33:28.041" endtime="20200503 16:33:28.469"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2788,9 +2788,9 @@
 <arg>sb_ifc51</arg>
 <arg>@{TRAVEL_LIST_END}[${i}]</arg>
 </arguments>
-<msg timestamp="20200423 01:19:47.382" level="INFO">Sending key(s) ('Kilpivirrantie, 1, 74124 IISALMI',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:47.666" level="INFO">Sending keys Kilpivirrantie, 1, 74124 IISALMI</msg>
-<status status="PASS" starttime="20200423 01:19:47.382" endtime="20200423 01:19:47.836"></status>
+<msg timestamp="20200503 16:33:28.470" level="INFO">Sending key(s) ('Kilpivirrantie, 1, 74124 IISALMI',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:28.734" level="INFO">Sending keys Kilpivirrantie, 1, 74124 IISALMI</msg>
+<status status="PASS" starttime="20200503 16:33:28.470" endtime="20200503 16:33:28.806"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -2798,32 +2798,32 @@
 <arg>sb_ifc51</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20200423 01:19:47.836" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
-<msg timestamp="20200423 01:19:48.185" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200423 01:19:48.185" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20200423 01:19:47.836" endtime="20200423 01:19:48.195"></status>
+<msg timestamp="20200503 16:33:28.806" level="INFO">Sending key(s) ('RETURN',) to sb_ifc51 element.</msg>
+<msg timestamp="20200503 16:33:29.083" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200503 16:33:29.083" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200503 16:33:28.806" endtime="20200503 16:33:29.088"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:48.195" endtime="20200423 01:19:48.922"></status>
+<status status="PASS" starttime="20200503 16:33:29.088" endtime="20200503 16:33:29.728"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>section-directions-trip-0</arg>
 </arguments>
-<msg timestamp="20200423 01:19:48.922" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
-<status status="PASS" starttime="20200423 01:19:48.922" endtime="20200423 01:19:49.141"></status>
+<msg timestamp="20200503 16:33:29.728" level="INFO">Clicking element 'section-directions-trip-0'.</msg>
+<status status="PASS" starttime="20200503 16:33:29.728" endtime="20200503 16:33:29.773"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>class=section-trip-summary-subtitle</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:49.141" endtime="20200423 01:19:49.365"></status>
+<status status="PASS" starttime="20200503 16:33:29.773" endtime="20200503 16:33:29.989"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -2833,23 +2833,23 @@
 <assign>
 <var>${trip}</var>
 </assign>
-<msg timestamp="20200423 01:19:49.376" level="INFO">${trip} = (164 km)</msg>
-<status status="PASS" starttime="20200423 01:19:49.365" endtime="20200423 01:19:49.376"></status>
+<msg timestamp="20200503 16:33:30.004" level="INFO">${trip} = (164 km)</msg>
+<status status="PASS" starttime="20200503 16:33:29.989" endtime="20200503 16:33:30.005"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${trip}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:49.376" endtime="20200423 01:19:49.376"></status>
+<status status="PASS" starttime="20200503 16:33:30.005" endtime="20200503 16:33:30.005"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>class=section-trip-header-back</arg>
 </arguments>
-<msg timestamp="20200423 01:19:49.376" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
-<status status="PASS" starttime="20200423 01:19:49.376" endtime="20200423 01:19:49.430"></status>
+<msg timestamp="20200503 16:33:30.005" level="INFO">Clicking element 'class=section-trip-header-back'.</msg>
+<status status="PASS" starttime="20200503 16:33:30.005" endtime="20200503 16:33:30.055"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2859,7 +2859,7 @@
 <arg>Checked Travel Distances</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+<status status="PASS" starttime="20200503 16:33:30.056" endtime="20200503 16:33:30.056"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2869,8 +2869,8 @@
 <assign>
 <var>${row_id}</var>
 </assign>
-<msg timestamp="20200423 01:19:49.431" level="INFO">${row_id} = 16</msg>
-<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+<msg timestamp="20200503 16:33:30.056" level="INFO">${row_id} = 16</msg>
+<status status="PASS" starttime="20200503 16:33:30.056" endtime="20200503 16:33:30.056"></status>
 </kw>
 <kw name="String 2 Float" library="CustomCode">
 <arguments>
@@ -2879,8 +2879,8 @@
 <assign>
 <var>${dist}</var>
 </assign>
-<msg timestamp="20200423 01:19:49.431" level="INFO">${dist} = 164.0</msg>
-<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+<msg timestamp="20200503 16:33:30.056" level="INFO">${dist} = 164.0</msg>
+<status status="PASS" starttime="20200503 16:33:30.056" endtime="20200503 16:33:30.056"></status>
 </kw>
 <kw name="Write Excel Cell" library="ExcelLibrary">
 <doc>Writes value to the cell.</doc>
@@ -2890,15 +2890,15 @@
 <arg>${dist}</arg>
 <arg>Data</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:49.431" endtime="20200423 01:19:49.431"></status>
+<status status="PASS" starttime="20200503 16:33:30.056" endtime="20200503 16:33:30.056"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:46.985" endtime="20200423 01:19:49.431"></status>
+<status status="PASS" starttime="20200503 16:33:28.040" endtime="20200503 16:33:30.056"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:25.174" endtime="20200423 01:19:49.432"></status>
+<status status="PASS" starttime="20200503 16:33:06.162" endtime="20200503 16:33:30.056"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.539" endtime="20200423 01:19:49.432"></status>
+<status status="PASS" starttime="20200503 16:33:03.162" endtime="20200503 16:33:30.057"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:19.538" endtime="20200423 01:19:49.432" critical="yes"></status>
+<status status="PASS" starttime="20200503 16:33:03.162" endtime="20200503 16:33:30.057" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Save and close">
 <kw name="Save and Close Excel" library="keywords">
@@ -2907,25 +2907,25 @@
 <arguments>
 <arg>filename=${WORK_FOLDER_PATH}${OUTPUT_PATH}</arg>
 </arguments>
-<status status="PASS" starttime="20200423 01:19:49.432" endtime="20200423 01:19:49.600"></status>
+<status status="PASS" starttime="20200503 16:33:30.057" endtime="20200503 16:33:30.233"></status>
 </kw>
 <kw name="Close Current Excel Document" library="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" starttime="20200423 01:19:49.600" endtime="20200423 01:19:49.600"></status>
+<status status="PASS" starttime="20200503 16:33:30.233" endtime="20200503 16:33:30.233"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:49.432" endtime="20200423 01:19:49.600"></status>
+<status status="PASS" starttime="20200503 16:33:30.057" endtime="20200503 16:33:30.233"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:19:49.432" endtime="20200423 01:19:49.600" critical="yes"></status>
+<status status="PASS" starttime="20200503 16:33:30.057" endtime="20200503 16:33:30.234" critical="yes"></status>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200423 01:19:49.601" endtime="20200423 01:19:49.745"></status>
+<status status="PASS" starttime="20200503 16:33:30.234" endtime="20200503 16:33:30.362"></status>
 </kw>
 <doc>Travel Distance Checker v. 0.1.1
 
 Check distances from Google maps with Robot Framework and Selenium
 </doc>
-<status status="PASS" starttime="20200423 01:19:19.187" endtime="20200423 01:19:49.745"></status>
+<status status="PASS" starttime="20200503 16:33:02.662" endtime="20200503 16:33:30.362"></status>
 </suite>
 <statistics>
 <total>
